@@ -1,58 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark-theme">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NETC311 Notebook — Introduction to Networks</title>
+  
+  <!-- Font Preloading -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+  
   <style>
+    /* =========================================
+       Pitch Black Digital Sobriety Theme
+       Inspired by jevvii-portfolio.vercel.app
+       ========================================= */
     :root {
-      --bg: #f9f9fb;
-      --surface: #ffffff;
-      --text-main: #1f1f1f;
-      --text-sub: #5e6266;
-      --text-muted: #747775;
-      --border: #e3e3e3;
-      --border-subtle: #eeeff1;
-      --blue-accent: #0b57d0;
-      --blue-subtle: #e8f0fe;
-      --radius-lg: 20px;
-      --radius-md: 14px;
+      /* OLED Blacks */
+      --color-bg-base: #000000;
+      --color-bg-surface: #0a0a0a;
+      --color-bg-surface-elevated: #141414;
+      
+      /* Earthy Muted Accents */
+      --color-accent-primary: #8a9a86;   /* Sage Green */
+      --color-accent-secondary: #a89f91; /* Soft Clay */
+      --color-focus: #b2c2ae;
+      
+      /* Text Colors */
+      --color-text-main: #f0f0f0;
+      --color-text-muted: #a0a0a0;
+      --color-text-subtle: #707070;
+      --color-text-inverse: #000000;
+
+      /* Borders */
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-medium: rgba(255, 255, 255, 0.16);
+      --border-accent: rgba(138, 154, 134, 0.35);
+
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 14px;
       --radius-pill: 9999px;
     }
 
-    * {
+    *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--color-bg-base);
+    }
+
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background-color: var(--bg);
-      color: var(--text-main);
-      line-height: 1.55;
+      background-color: var(--color-bg-base);
+      color: var(--color-text-main);
+      line-height: 1.6;
       -webkit-font-smoothing: antialiased;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
     }
 
-    /* Minimalist Top Nav */
-    nav.top-nav {
+    /* Fixed Glassmorphism Header */
+    header.site-header {
       position: sticky;
       top: 0;
+      width: 100%;
       z-index: 100;
-      background: rgba(249, 249, 251, 0.85);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--border);
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-subtle);
       padding: 14px 28px;
+    }
+
+    nav.nav-bar {
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
+      max-width: 960px;
+      margin: 0 auto;
     }
 
     .brand {
@@ -60,256 +91,266 @@
       align-items: center;
       gap: 10px;
       text-decoration: none;
-      color: var(--text-main);
+      color: var(--color-text-main);
       font-weight: 600;
       font-size: 0.95rem;
       letter-spacing: -0.01em;
     }
 
-    .brand-icon {
-      width: 22px;
-      height: 22px;
+    .brand-sparkle {
+      color: var(--color-accent-primary);
+      font-size: 1rem;
+    }
+
+    .brand-title {
+      color: var(--color-accent-primary);
+      font-weight: 600;
+    }
+
+    .brand-sub {
+      color: var(--color-text-muted);
+      font-weight: 400;
+    }
+
+    .nav-links {
       display: flex;
       align-items: center;
-      justify-content: center;
-      border-radius: 6px;
-      background: var(--blue-subtle);
-      color: var(--blue-accent);
+      gap: 10px;
     }
 
-    .brand-icon svg {
-      width: 15px;
-      height: 15px;
-      fill: var(--blue-accent);
-    }
-
-    .nav-actions {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .nav-btn {
+    .nav-link {
+      color: var(--color-text-muted);
+      text-decoration: none;
       font-size: 0.85rem;
       font-weight: 500;
-      text-decoration: none;
-      color: var(--text-sub);
       padding: 6px 14px;
-      border-radius: var(--radius-pill);
-      border: 1px solid var(--border);
-      background: var(--surface);
-      transition: all 0.15s ease;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-subtle);
+      background: transparent;
+      transition: all 0.2s ease;
     }
 
-    .nav-btn:hover {
-      color: var(--text-main);
-      border-color: #c4c7c5;
-      background: #f1f3f4;
+    .nav-link:hover {
+      color: var(--color-text-main);
+      border-color: var(--border-medium);
+      background: rgba(255, 255, 255, 0.04);
     }
 
-    /* Layout Container */
-    .container {
-      max-width: 860px;
+    /* Container */
+    main.container {
+      max-width: 960px;
       margin: 0 auto;
-      padding: 3rem 1.5rem 4rem;
+      padding: 3.5rem 1.5rem 5rem;
       width: 100%;
       flex: 1;
     }
 
     /* Hero Section */
     .hero {
-      margin-bottom: 2.75rem;
+      margin-bottom: 3.5rem;
     }
 
-    .gemini-pill {
+    .tagline {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      padding: 4px 12px;
-      border-radius: var(--radius-pill);
-      font-size: 0.8rem;
+      gap: 8px;
+      font-size: 0.82rem;
       font-weight: 500;
-      color: var(--text-sub);
-      margin-bottom: 1.25rem;
-    }
-
-    .gemini-sparkle {
-      color: #7c3aed;
-      font-size: 0.85rem;
+      color: var(--color-accent-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1rem;
     }
 
     h1.title {
-      font-size: 2.25rem;
-      font-weight: 700;
-      letter-spacing: -0.025em;
-      color: var(--text-main);
-      margin-bottom: 0.6rem;
-      line-height: 1.25;
+      font-size: clamp(2.2rem, 5vw, 3.2rem);
+      font-weight: 200;
+      letter-spacing: -0.03em;
+      color: var(--color-text-main);
+      line-height: 1.15;
+      margin-bottom: 0.85rem;
     }
 
-    p.subtitle {
-      font-size: 1.05rem;
-      color: var(--text-sub);
-      max-width: 620px;
-      line-height: 1.6;
-      margin-bottom: 1.5rem;
+    .subtitle {
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: var(--color-accent-secondary);
+      margin-bottom: 1.25rem;
     }
 
-    .meta-pills {
+    .bio {
+      font-size: 0.95rem;
+      color: var(--color-text-muted);
+      max-width: 680px;
+      line-height: 1.7;
+      margin-bottom: 1.75rem;
+    }
+
+    .meta-strip {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
     }
 
-    .pill {
-      font-size: 0.8rem;
-      font-weight: 500;
-      padding: 4px 10px;
-      border-radius: var(--radius-pill);
-      background: rgba(0, 0, 0, 0.04);
-      color: var(--text-sub);
+    .meta-pill {
+      font-size: 0.78rem;
+      font-weight: 400;
+      color: var(--color-text-muted);
+      background: var(--color-bg-surface);
+      border: 1px solid var(--border-subtle);
+      padding: 4px 12px;
+      border-radius: var(--radius-sm);
     }
 
-    /* Quizzes Section */
-    .section-label {
-      font-size: 0.8rem;
+    .meta-pill strong {
+      color: var(--color-accent-primary);
+      font-weight: 500;
+    }
+
+    /* Section Headers */
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.25rem;
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-size: 0.85rem;
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.06em;
-      color: var(--text-muted);
-      margin-bottom: 1rem;
+      color: var(--color-accent-secondary);
     }
 
+    /* Quiz Cards */
     .quiz-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-      gap: 1.25rem;
-      margin-bottom: 3rem;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3.5rem;
     }
 
     .quiz-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 1.75rem;
+      background: var(--color-bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 1.85rem;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .quiz-card:hover {
-      border-color: #c4c7c5;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+      border-color: var(--color-accent-primary);
+      background: var(--color-bg-surface-elevated);
       transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(138, 154, 134, 0.1);
     }
 
-    .card-header {
+    .card-top {
+      margin-bottom: 1.75rem;
+    }
+
+    .card-badge-row {
       display: flex;
       align-items: center;
       justify-content: space-between;
       margin-bottom: 1rem;
     }
 
-    .module-badge {
-      font-size: 0.75rem;
+    .card-badge {
+      font-size: 0.72rem;
       font-weight: 600;
-      padding: 3px 8px;
-      border-radius: 6px;
-      background: var(--blue-subtle);
-      color: var(--blue-accent);
+      letter-spacing: 0.05em;
       text-transform: uppercase;
-      letter-spacing: 0.04em;
+      color: var(--color-accent-primary);
+      background: rgba(138, 154, 134, 0.1);
+      border: 1px solid rgba(138, 154, 134, 0.25);
+      padding: 3px 8px;
+      border-radius: var(--radius-sm);
     }
 
-    .item-count {
+    .card-count {
       font-size: 0.8rem;
-      color: var(--text-muted);
-      font-weight: 500;
+      color: var(--color-text-subtle);
     }
 
     .card-title {
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: var(--text-main);
-      letter-spacing: -0.015em;
-      margin-bottom: 0.5rem;
+      font-size: 1.35rem;
+      font-weight: 400;
+      color: var(--color-text-main);
+      letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
     }
 
     .card-desc {
       font-size: 0.88rem;
-      color: var(--text-sub);
-      line-height: 1.55;
-      margin-bottom: 1.5rem;
+      color: var(--color-text-muted);
+      line-height: 1.6;
     }
 
     .card-actions {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
     }
 
     .btn-primary {
       flex: 1;
       text-align: center;
-      background: var(--text-main);
-      color: #ffffff;
+      background-color: var(--color-accent-primary);
+      color: var(--color-text-inverse);
+      font-weight: 600;
       font-size: 0.88rem;
-      font-weight: 500;
-      padding: 9px 16px;
-      border-radius: var(--radius-pill);
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
       text-decoration: none;
-      transition: background-color 0.15s ease;
+      border: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
     }
 
     .btn-primary:hover {
-      background: #3c4043;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(138, 154, 134, 0.3);
+      filter: brightness(1.08);
     }
 
     .btn-secondary {
       text-align: center;
       background: transparent;
-      color: var(--text-sub);
-      font-size: 0.88rem;
+      color: var(--color-text-main);
       font-weight: 500;
-      padding: 8px 14px;
-      border-radius: var(--radius-pill);
-      border: 1px solid var(--border);
+      font-size: 0.88rem;
+      padding: 9px 16px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-medium);
       text-decoration: none;
-      transition: all 0.15s ease;
+      transition: all 0.2s ease;
     }
 
     .btn-secondary:hover {
-      color: var(--text-main);
-      border-color: #c4c7c5;
-      background: #f1f3f4;
+      border-color: var(--color-accent-primary);
+      color: var(--color-accent-primary);
+      background: rgba(138, 154, 134, 0.06);
     }
 
-    /* Sources / Downloads Box */
+    /* Sources Section */
     .sources-box {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
+      background: var(--color-bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
       padding: 1.75rem;
     }
 
-    .sources-header {
+    .sources-desc {
+      font-size: 0.88rem;
+      color: var(--color-text-muted);
       margin-bottom: 1.25rem;
-    }
-
-    .sources-header h3 {
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--text-main);
-      letter-spacing: -0.01em;
-      margin-bottom: 0.25rem;
-    }
-
-    .sources-header p {
-      font-size: 0.85rem;
-      color: var(--text-muted);
     }
 
     .source-list {
@@ -322,77 +363,78 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 10px 14px;
-      background: #fafafc;
+      padding: 12px 16px;
+      background: #000000;
       border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
+      border-radius: var(--radius-sm);
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 12px;
+      transition: border-color 0.2s ease;
+    }
+
+    .source-row:hover {
+      border-color: var(--border-medium);
     }
 
     .source-info {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
     }
 
-    .source-icon {
-      width: 28px;
-      height: 28px;
-      border-radius: 6px;
-      background: #ffffff;
-      border: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.75rem;
+    .source-tag {
+      font-size: 0.72rem;
       font-weight: 700;
-      color: var(--text-muted);
+      color: var(--color-accent-primary);
+      background: rgba(138, 154, 134, 0.1);
+      border: 1px solid rgba(138, 154, 134, 0.2);
+      padding: 4px 8px;
+      border-radius: var(--radius-sm);
     }
 
     .source-name {
-      font-size: 0.88rem;
-      font-weight: 500;
-      color: var(--text-main);
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: var(--color-text-main);
     }
 
     .file-badges {
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
     }
 
     .file-badge {
       font-size: 0.75rem;
       font-weight: 500;
-      padding: 4px 10px;
-      border-radius: var(--radius-pill);
+      padding: 5px 12px;
+      border-radius: var(--radius-sm);
       text-decoration: none;
-      border: 1px solid var(--border);
-      background: var(--surface);
-      color: var(--text-sub);
+      border: 1px solid var(--border-subtle);
+      background: var(--color-bg-surface);
+      color: var(--color-text-muted);
       transition: all 0.15s ease;
     }
 
     .file-badge:hover {
-      border-color: #0b57d0;
-      color: #0b57d0;
-      background: var(--blue-subtle);
+      color: var(--color-text-main);
+      border-color: var(--color-accent-primary);
+      background: rgba(138, 154, 134, 0.1);
     }
 
     /* Footer */
     footer {
-      border-top: 1px solid var(--border);
-      padding: 1.75rem 1.5rem;
+      border-top: 1px solid var(--border-subtle);
+      padding: 2rem 1.5rem;
       text-align: center;
       font-size: 0.8rem;
-      color: var(--text-muted);
-      background: var(--surface);
+      color: var(--color-text-subtle);
+      background: #000000;
       margin-top: auto;
     }
 
     footer a {
-      color: var(--text-sub);
+      color: var(--color-accent-primary);
       text-decoration: none;
     }
 
@@ -403,51 +445,56 @@
 </head>
 <body>
 
-  <!-- Minimalist Top Nav -->
-  <nav class="top-nav">
-    <a href="index.html" class="brand">
-      <div class="brand-icon">
-        <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+  <!-- Pitch Black Header -->
+  <header class="site-header">
+    <nav class="nav-bar">
+      <a href="index.html" class="brand">
+        <span class="brand-sparkle">✦</span>
+        <span class="brand-title">NETC311</span>
+        <span class="brand-sub">Notebook</span>
+      </a>
+      <div class="nav-links">
+        <a href="module1.html" class="nav-link">Module 1 (99 Qs)</a>
+        <a href="module2.html" class="nav-link">Module 2 (104 Qs)</a>
       </div>
-      <span>NETC311 Notebook</span>
-    </a>
-    <div class="nav-actions">
-      <a href="module1.html" class="nav-btn">Module 1 (99 Qs)</a>
-      <a href="module2.html" class="nav-btn">Module 2 (104 Qs)</a>
-    </div>
-  </nav>
+    </nav>
+  </header>
 
   <main class="container">
-    <!-- Hero -->
+    <!-- Hero Section -->
     <section class="hero">
-      <div class="gemini-pill">
-        <span class="gemini-sparkle">✦</span>
-        <span>NotebookLM Interactive Reviewer</span>
-      </div>
+      <div class="tagline">✦ NotebookLM Interactive Reviewer</div>
       <h1 class="title">Introduction to Networks</h1>
-      <p class="subtitle">An exhaustive study notebook of 203 identification quiz items across Cisco ITN Modules 1 and 2, featuring real-time rationales and instant feedback.</p>
-      
-      <div class="meta-pills">
-        <span class="pill">203 Total Questions</span>
-        <span class="pill">2 Modules</span>
-        <span class="pill">Full Explanations & Hints</span>
-        <span class="pill">Cisco CCNA v7.0</span>
+      <div class="subtitle">NETC311 &bull; Cisco CCNA v7.0 (ITN)</div>
+      <p class="bio">
+        A focused digital study notebook containing 203 comprehensive identification questions extracted directly from Modules 1 & 2. Complete with instant AI rationales, hints, and curriculum references.
+      </p>
+      <div class="meta-strip">
+        <span class="meta-pill"><strong>203</strong> Total Items</span>
+        <span class="meta-pill"><strong>2</strong> Modules</span>
+        <span class="meta-pill"><strong>100%</strong> Explanations</span>
+        <span class="meta-pill">Instant Feedback</span>
       </div>
     </section>
 
     <!-- Quizzes Grid -->
-    <div class="section-label">Interactive Quizzes</div>
+    <div class="section-header">
+      <span class="section-title">Interactive Quizzes</span>
+    </div>
+    
     <div class="quiz-grid">
       
       <!-- Module 1 -->
       <div class="quiz-card">
-        <div>
-          <div class="card-header">
-            <span class="module-badge">Module 1</span>
-            <span class="item-count">99 Items</span>
+        <div class="card-top">
+          <div class="card-badge-row">
+            <span class="card-badge">Module 1</span>
+            <span class="card-count">99 Items</span>
           </div>
           <h2 class="card-title">Networking Today</h2>
-          <p class="card-desc">Host roles, intermediary devices, network media, topologies, LAN vs WAN, internet connections, reliable networks (Fault Tolerance, Scalability, QoS, Security), and modern trends.</p>
+          <p class="card-desc">
+            Host roles, peer-to-peer networks, intermediary devices, transmission media, topologies, LAN vs WAN, reliable networks (Fault Tolerance, Scalability, QoS, Security), and modern networking trends.
+          </p>
         </div>
         <div class="card-actions">
           <a href="module1.html" class="btn-primary">Start Quiz &rarr;</a>
@@ -457,13 +504,15 @@
 
       <!-- Module 2 -->
       <div class="quiz-card">
-        <div>
-          <div class="card-header">
-            <span class="module-badge">Module 2</span>
-            <span class="item-count">104 Items</span>
+        <div class="card-top">
+          <div class="card-badge-row">
+            <span class="card-badge">Module 2</span>
+            <span class="card-count">104 Items</span>
           </div>
-          <h2 class="card-title">Switch & Device Configuration</h2>
-          <p class="card-desc">Cisco IOS navigation, command modes (User EXEC, Privileged EXEC, Global Config), hotkeys, device naming, password security, banner MOTD, and SVI setup.</p>
+          <h2 class="card-title">Basic Switch & Device Configuration</h2>
+          <p class="card-desc">
+            Cisco IOS navigation, command modes (User EXEC, Privileged EXEC, Global Config), CLI shortcuts, device naming, password security, banner MOTD, and SVI IP configuration.
+          </p>
         </div>
         <div class="card-actions">
           <a href="module2.html" class="btn-primary">Start Quiz &rarr;</a>
@@ -473,26 +522,26 @@
 
     </div>
 
-    <!-- Offline Sources & Downloads -->
-    <div class="section-label">Study Sources & Offline Reviewers</div>
+    <!-- Sources Section -->
+    <div class="section-header">
+      <span class="section-title">Notebook Sources & Downloads</span>
+    </div>
+
     <div class="sources-box">
-      <div class="sources-header">
-        <h3>Curated Materials</h3>
-        <p>Download printable question sheets, answer keys with explanations, or structured datasets.</p>
-      </div>
+      <p class="sources-desc">
+        Download the offline questionnaires, answer keys with explanations, and structured datasets.
+      </p>
 
       <div class="source-list">
         
         <div class="source-row">
           <div class="source-info">
-            <div class="source-icon">M1</div>
-            <div>
-              <div class="source-name">Module 1 — Networking Today Reviewer</div>
-            </div>
+            <span class="source-tag">M1</span>
+            <span class="source-name">Module 1 — Networking Today Reviewer</span>
           </div>
           <div class="file-badges">
             <a href="downloads/Module 1 - Networking Today - Questionnaire.pdf" download class="file-badge">PDF</a>
-            <a href="downloads/Module 1 - Networking Today - Questionnaire.docx" download class="file-badge">Word (.docx)</a>
+            <a href="downloads/Module 1 - Networking Today - Questionnaire.docx" download class="file-badge">DOCX</a>
             <a href="downloads/Module_1_NotebookLM_Quiz.json" download class="file-badge">JSON</a>
             <a href="downloads/Module_1_NotebookLM_Quiz.md" download class="file-badge">Markdown</a>
           </div>
@@ -500,14 +549,12 @@
 
         <div class="source-row">
           <div class="source-info">
-            <div class="source-icon">M2</div>
-            <div>
-              <div class="source-name">Module 2 — Basic Switch & Device Config Reviewer</div>
-            </div>
+            <span class="source-tag">M2</span>
+            <span class="source-name">Module 2 — Basic Switch & Device Config Reviewer</span>
           </div>
           <div class="file-badges">
             <a href="downloads/Module 2 - Basic Switch and End Device Configuration - Questionnaire.pdf" download class="file-badge">PDF</a>
-            <a href="downloads/Module 2 - Basic Switch and End Device Configuration - Questionnaire.docx" download class="file-badge">Word (.docx)</a>
+            <a href="downloads/Module 2 - Basic Switch and End Device Configuration - Questionnaire.docx" download class="file-badge">DOCX</a>
             <a href="downloads/Module_2_NotebookLM_Quiz.json" download class="file-badge">JSON</a>
             <a href="downloads/Module_2_NotebookLM_Quiz.md" download class="file-badge">Markdown</a>
           </div>
@@ -515,10 +562,11 @@
 
       </div>
     </div>
+
   </main>
 
   <footer>
-    <p>NETC311: Introduction to Networks v7.0 (ITN) &bull; Academic Review Hub &bull; Powered by NotebookLM</p>
+    <p>NETC311 &bull; Cisco Networking Academy &bull; University Quiz & Review Hub &bull; Powered by NotebookLM</p>
   </footer>
 
 </body>
