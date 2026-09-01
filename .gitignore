@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.system_generated/
+*.log
+test_quiz*.json
+test_quiz*.html
