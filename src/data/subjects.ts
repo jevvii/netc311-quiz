@@ -90,7 +90,7 @@ export const SUBJECTS: Subject[] = [
         number: 1,
         title: 'The Scientific Method & Basic Chemistry',
         description: 'Phases of the scientific method, hypothesis falsifiability, controlled experiments, matter, atomic structure, isotopes, covalent/ionic bonds, water properties, macromolecules, amino acids, enzymes, and DNA/RNA.',
-        itemCount: 82,
+        itemCount: 152,
         topics: ['Scientific Method', 'Atoms & Bonds', 'Water Polarity', 'Biomolecules', 'Enzymes', 'DNA vs RNA'],
         quizPath: 'quizzes/hmby311/module1.html',
         notebookLmUrl: 'https://notebooklm.google.com/notebook/ee53d9b1-22a8-4a9b-a53b-66e8af5bd0ed',

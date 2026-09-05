@@ -1,598 +1,1112 @@
 # HMBY311 Module 1: The Scientific Method and Basic Chemistry
-# Exhaustive identification items extracted from lecture slide deck
+# Exhaustive identification items extracted verbatim and comprehensively from:
+# /home/javvii/YearIII/HMBY311/module1/THE SCIENTIFIC METHOD and BASIC CHEMISTRY 2nd TOPIC.txt
 
 HMBY_MODULE_1_ITEMS = [
-    # --- Part 1: The Scientific Method ---
+    # =========================================================================
+    # PART 1: THE SCIENTIFIC METHOD
+    # =========================================================================
     {
-        "q": "A systematic way of learning about the natural world by applying rules of logic to how information is gathered and conclusions are drawn is the ____.",
+        "q": "A systematic way of learning about the natural world by applying rules of logic to the way information is gathered and conclusions are drawn is the ____.",
         "a": "scientific method",
-        "distractors": ["theory of relativity", "inductive reasoning", "anecdotal evidence"],
-        "topic": "Scientific Method Overview",
-        "explanation": "The scientific method is defined as a logical process for learning about the natural world through systematic observation, hypothesis testing, and data analysis."
+        "distractors": ["inductive philosophy", "natural law", "anecdotal observation"],
+        "topic": "Scientific Method Definition",
+        "explanation": "The scientific method is defined as a systematic approach to investigating the natural world through logical inquiry, rigorous observation, and evidence-based conclusion."
     },
     {
-        "q": "In the scientific method, careful observation of the natural environment typically prompts a ____ that is grounded in existing knowledge.",
+        "q": "In the scientific method, Phase 1 begins when careful observation prompts a ____ that is grounded in existing scientific knowledge.",
         "a": "question",
-        "distractors": ["law", "conclusion", "proof"],
-        "topic": "Phase 1: Observation",
-        "explanation": "Phase 1 of the scientific method involves making careful observations which prompt a specific question based on existing scientific knowledge."
+        "distractors": ["conclusion", "dogma", "proof"],
+        "topic": "Phase 1: Observation & Question",
+        "explanation": "Phase 1 involves making careful observations of the environment, which in turn prompts a specific question informed by existing knowledge."
     },
     {
-        "q": "A proposed testable explanation formulated as a possible answer to an observed scientific question is a ____.",
+        "q": "According to the scientific method, questions prompted by observations should be based on existing knowledge gathered through observation of the ____.",
+        "a": "environment",
+        "distractors": ["virtual model", "speculation", "mathematical theory"],
+        "topic": "Phase 1: Environmental Observation",
+        "explanation": "Observation of the natural environment provides the empirical foundation upon which scientific questions are formulated."
+    },
+    {
+        "q": "A testable possible explanation formulated as a tentative answer to an observed question is a ____.",
         "a": "hypothesis",
-        "distractors": ["scientific law", "variable", "control"],
-        "topic": "Phase 2: Hypothesis",
-        "explanation": "A hypothesis is a tentative, testable statement proposed to explain an observed phenomenon."
-    },
-    {
-        "q": "To be methodologically valid, a scientific hypothesis must be phrased as a ____, rather than as a question.",
-        "a": "statement",
-        "distractors": ["inquiry", "riddle", "paradox"],
+        "distractors": ["scientific law", "variable", "paradigm"],
         "topic": "Phase 2: Hypothesis Formulation",
-        "explanation": "A scientific hypothesis must always be formulated as a declarative statement (e.g., 'Daily exposure to the sun leads to increased levels of happiness') rather than a question."
+        "explanation": "Phase 2 requires developing a testable hypothesis, which represents a plausible explanation or answer to the question asked."
     },
     {
-        "q": "A fundamental characteristic of any valid scientific hypothesis is that it must be testable, meaning that it has the potential to be proven ____.",
+        "q": "To be methodologically sound and scientifically valid, a hypothesis must always be phrased as a ____, rather than as an interrogative question.",
+        "a": "statement",
+        "distractors": ["question", "metaphor", "paradox"],
+        "topic": "Phase 2: Hypothesis Format",
+        "explanation": "A hypothesis must be framed as a definitive declarative statement (e.g., 'Daily exposure to the sun leads to increased levels of happiness') rather than a question."
+    },
+    {
+        "q": "In scientific inquiry, the proposition 'Daily exposure to the sun leads to increased levels of happiness' is a classic example of a ____.",
+        "a": "hypothesis",
+        "distractors": ["control group", "conclusion", "scientific law"],
+        "topic": "Phase 2: Hypothesis Example",
+        "explanation": "The proposition 'Daily exposure to the sun leads to increased levels of happiness' is an example of a testable declarative statement formulating a hypothesis."
+    },
+    {
+        "q": "A fundamental characteristic of any valid hypothesis is that it must be testable, which means that it has the potential to be proven ____.",
         "a": "false",
-        "distractors": ["infallible", "absolute", "inviolable"],
-        "topic": "Phase 2: Falsifiability",
-        "explanation": "A hypothesis can never be proven absolutely true beyond all doubt, but it must be testable so that empirical evidence can prove it false (falsifiability)."
+        "distractors": ["infallible", "absolute", "unquestionable"],
+        "topic": "Phase 2: Testability & Falsifiability",
+        "explanation": "For a hypothesis to be scientifically valid, it must be falsifiable—meaning there must be conceivable empirical observations that could prove it false."
     },
     {
-        "q": "In testing a hypothesis, scientists formulate a ____ that specifies the expected outcome and dictates the necessary experimental design.",
+        "q": "In the philosophy of science, while empirical experimentation can definitively prove a hypothesis false, it can never be proven as ____.",
+        "a": "true",
+        "distractors": ["false", "testable", "provisional"],
+        "topic": "Phase 2: Provisional Nature of Science",
+        "explanation": "A hypothesis can be supported repeatedly, but in empirical science, it can never be proven absolutely true beyond all future revision."
+    },
+    {
+        "q": "In Phase 3 of the scientific method, researchers make a ____ based on the hypothesis, which guides the experimental design.",
         "a": "prediction",
-        "distractors": ["retraction", "postulate", "paradigm"],
+        "distractors": ["conclusion", "axiom", "postulate"],
         "topic": "Phase 3: Prediction",
-        "explanation": "Making a prediction based on the hypothesis determines the precise experiments and observations required to test the proposed explanation."
+        "explanation": "A prediction forecasts the specific expected outcome of an experiment if the hypothesis holds true."
     },
     {
-        "q": "An experimental test where all conditions are held constant except for the specific factor under investigation is known as a ____.",
-        "a": "controlled experiment",
-        "distractors": ["blind survey", "anecdotal trial", "observational drift"],
+        "q": "In experimental methodology, the formulated prediction will determine the experiment or observations that are necessary to ____ the hypothesis.",
+        "a": "test",
+        "distractors": ["discard", "crystallize", "canonize"],
+        "topic": "Phase 3: Testing Predictions",
+        "explanation": "The prediction dictates what specific empirical data and observations must be collected to test the validity of the hypothesis."
+    },
+    {
+        "q": "An experiment that tests a hypothesis by comparing an experimental cohort with a reference cohort under identical conditions is a ____ experiment.",
+        "a": "controlled",
+        "distractors": ["spontaneous", "speculative", "subjective"],
         "topic": "Phase 3: Controlled Experiment",
-        "explanation": "A controlled experiment tests a hypothesis by comparing a control group with an experimental group under identical conditions."
+        "explanation": "A controlled experiment isolates the effect of an independent variable by maintaining identical baseline conditions across groups."
     },
     {
-        "q": "In a controlled experiment, the single factor that differs between the experimental group and the control group is the ____.",
+        "q": "In a controlled experiment, the two cohorts compared to evaluate the hypothesis are the experimental group and the ____ group.",
+        "a": "control",
+        "distractors": ["variable", "dependent", "alternate"],
+        "topic": "Phase 3: Control Group",
+        "explanation": "Controlled experiments require both a control group (baseline reference) and an experimental group (treatment cohort)."
+    },
+    {
+        "q": "In a controlled experiment, the control group and the experimental group differ only on a single factor known as a ____.",
         "a": "variable",
         "distractors": ["constant", "placebo", "hypothesis"],
+        "topic": "Phase 3: Variable Distinction",
+        "explanation": "The single factor that differs between the control and experimental groups is the variable."
+    },
+    {
+        "q": "In a controlled experiment, the specific factor whose biological effect is being revealed is called the ____.",
+        "a": "variable",
+        "distractors": ["constant", "control", "sample size"],
         "topic": "Phase 3: Experimental Variable",
-        "explanation": "The variable is the specific factor being manipulated or tested to reveal its biological effect."
+        "explanation": "The variable is the distinct factor being tested to determine its effect on the experimental system."
     },
     {
-        "q": "In a controlled experiment, the cohort that is maintained under standard conditions without receiving the experimental treatment is the ____.",
-        "a": "control group",
-        "distractors": ["experimental group", "variable group", "cohort sample"],
-        "topic": "Phase 3: Control Group",
-        "explanation": "The control group serves as the baseline for comparison and does not receive the experimental manipulation."
-    },
-    {
-        "q": "In a controlled experiment, the cohort subjected to the specific variable being tested is the ____.",
-        "a": "experimental group",
-        "distractors": ["control group", "null group", "baseline cohort"],
-        "topic": "Phase 3: Experimental Group",
-        "explanation": "The experimental group receives the variable factor whose effect is being investigated."
-    },
-    {
-        "q": "The final phase of the scientific method where experimental data is interpreted to accept or reject the hypothesis is drawing a ____.",
+        "q": "In Phase 4 of the scientific method, researchers draw a ____ based on the rigorous interpretation of experimental data.",
         "a": "conclusion",
-        "distractors": ["hypothesis", "variable", "prediction"],
+        "distractors": ["hypothesis", "prediction", "variable"],
         "topic": "Phase 4: Conclusion",
-        "explanation": "Conclusions are drawn after analyzing and interpreting empirical data gathered from the experiment."
+        "explanation": "Phase 4 culminates in drawing conclusions based on the systematic analysis and interpretation of empirical results."
     },
     {
-        "q": "To ensure that experimental findings and differences between groups are not merely the result of chance, researchers evaluate ____.",
+        "q": "In the scientific method, the final conclusion reached by researchers is based directly on the interpretation of ____.",
+        "a": "data",
+        "distractors": ["intuition", "consensus", "tradition"],
+        "topic": "Phase 4: Data Interpretation",
+        "explanation": "Scientific conclusions must be derived strictly from the objective interpretation of empirical data gathered during testing."
+    },
+    {
+        "q": "To ensure that experimental results and differences between groups are not due to chance alone, researchers require ____.",
         "a": "statistical significance",
-        "distractors": ["subjective consensus", "anecdotal frequency", "random variance"],
+        "distractors": ["subjective confidence", "anecdotal consensus", "peer agreement"],
         "topic": "Phase 4: Statistical Significance",
-        "explanation": "Statistical significance provides mathematical assurance that observed experimental differences did not occur simply by chance."
+        "explanation": "Statistical significance ensures mathematically that observed experimental results are unlikely to have arisen by random chance."
     },
 
-    # --- Part 2: Basic Chemistry & Matter ---
+    # =========================================================================
+    # PART 2: MATTER, ELEMENTS, ATOMS & ISOTOPES
+    # =========================================================================
     {
-        "q": "Anything that possesses mass, occupies three-dimensional space, and is made up of atoms is defined as ____.",
+        "q": "Anything that possesses mass and occupies physical space is defined in chemistry as ____.",
         "a": "matter",
         "distractors": ["energy", "radiation", "vacuum"],
-        "topic": "Matter & Atoms",
-        "explanation": "Matter is defined as anything that has mass and occupies physical space."
+        "topic": "Matter Definition",
+        "explanation": "Matter is defined as any physical substance that has mass and occupies volume in space."
     },
     {
-        "q": "The fundamental structural units of matter that cannot be broken down into simpler substances by ordinary chemical means are ____.",
+        "q": "Matter is composed of fundamental structural units called ____, which cannot be broken down into simpler substances by ordinary chemical means.",
         "a": "atoms",
-        "distractors": ["macromolecules", "cells", "compounds"],
+        "distractors": ["cells", "macromolecules", "compounds"],
         "topic": "Atoms",
-        "explanation": "Atoms are the smallest functional units of an element that retain its chemical properties and cannot be chemically cleaved."
+        "explanation": "Atoms are the indivisible basic units of matter that retain chemical identity and cannot be chemically cleaved."
     },
     {
-        "q": "The three subatomic particles that compose atoms are protons, electrons, and ____.",
+        "q": "Although indivisible by chemical means, atoms are composed of smaller subatomic particles, namely protons, electrons, and ____.",
         "a": "neutrons",
         "distractors": ["photons", "quarks", "positrons"],
         "topic": "Subatomic Particles",
-        "explanation": "Atoms consist of positively charged protons, uncharged neutrons (in the nucleus), and negatively charged electrons."
+        "explanation": "Atoms consist of three fundamental subatomic particles: protons, neutrons, and electrons."
     },
     {
-        "q": "A pure form of matter that consists exclusively of one single type of atom is called an ____.",
+        "q": "The subatomic particle located within the atomic nucleus that possesses a positive electrical charge is the ____.",
+        "a": "proton",
+        "distractors": ["neutron", "electron", "neutrino"],
+        "topic": "Protons",
+        "explanation": "Protons are positively charged subatomic particles that reside in the nucleus of an atom."
+    },
+    {
+        "q": "The subatomic particle located in the nucleus that carries no electrical charge (is neutral) is the ____.",
+        "a": "neutron",
+        "distractors": ["proton", "electron", "ion"],
+        "topic": "Neutrons",
+        "explanation": "Neutrons are uncharged, neutral subatomic particles present alongside protons in the atomic nucleus."
+    },
+    {
+        "q": "The subatomic particle that orbits the nucleus and carries a negative electrical charge is the ____.",
+        "a": "electron",
+        "distractors": ["proton", "neutron", "positron"],
+        "topic": "Electrons",
+        "explanation": "Electrons are negatively charged subatomic particles that occupy orbitals surrounding the atomic nucleus."
+    },
+    {
+        "q": "If a pure form of matter contains only one kind of atom, it is identified as an ____.",
         "a": "element",
         "distractors": ["compound", "isotope", "mixture"],
         "topic": "Elements",
-        "explanation": "An element is a substance containing only one kind of atom and cannot be broken down chemically."
+        "explanation": "An element is a pure substance consisting entirely of one specific species of atom."
     },
     {
-        "q": "Of the more than 100 known chemical elements, approximately ____ elements are found in and essential to the human body.",
+        "q": "In the physical universe and periodic table, there are more than ____ known chemical elements.",
+        "a": "100",
+        "distractors": ["50", "20", "500"],
+        "topic": "Known Elements",
+        "explanation": "Modern science recognizes more than 100 distinct chemical elements."
+    },
+    {
+        "q": "Although there are more than 100 known elements, only about ____ elements are found naturally in the human body.",
         "a": "20",
         "distractors": ["4", "50", "92"],
-        "topic": "Elements in the Human Body",
-        "explanation": "While there are over 100 known elements, only about 20 are naturally present in the human body."
+        "topic": "Elements in Human Body",
+        "explanation": "Approximately 20 chemical elements are biologically utilized and found within the human body."
     },
     {
-        "q": "The four most abundant elements that make up the vast majority of human body tissues are carbon, oxygen, hydrogen, and ____.",
-        "a": "nitrogen",
-        "distractors": ["calcium", "phosphorus", "iron"],
+        "q": "The vast majority of human body tissue is composed mostly of four primary elements: carbon, oxygen, nitrogen, and ____.",
+        "a": "hydrogen",
+        "distractors": ["phosphorus", "calcium", "potassium"],
         "topic": "Major Elements of Human Body",
-        "explanation": "Carbon, Oxygen, Hydrogen, and Nitrogen (COHN) comprise roughly 96% of human body mass."
+        "explanation": "Carbon, Oxygen, Hydrogen, and Nitrogen (COHN) constitute roughly 96% of human body mass."
     },
     {
-        "q": "The standard unit of measurement used to quantify the atomic weight or mass of an element is the ____.",
+        "q": "In standard chemical nomenclature, chemical elements are abbreviated by a ____ symbol.",
+        "a": "one or two-letter",
+        "distractors": ["three-letter", "numerical", "Greek letter"],
+        "topic": "Chemical Symbols",
+        "explanation": "Elements are standardly represented by a one or two-letter symbol derived from their English or Latin names (e.g., C, O, Na, He)."
+    },
+    {
+        "q": "The standard metric unit used to quantify and measure the atomic weight of an element is the ____.",
         "a": "atomic mass unit",
-        "distractors": ["gram per mole", "angstrom", "joule"],
-        "topic": "Atomic Mass",
-        "explanation": "The atomic mass unit (amu or Dalton) is standardly used to express atomic weight."
+        "distractors": ["gram per liter", "angstrom", "joule"],
+        "topic": "Atomic Mass Unit",
+        "explanation": "Atomic weight or mass is measured in atomic mass units (amu), also known as Daltons."
     },
     {
-        "q": "The atomic weight of an element is primarily determined by the total number of protons and ____.",
+        "q": "The atomic weight of any given chemical element is primarily influenced by the total number of protons and ____.",
         "a": "neutrons",
-        "distractors": ["electrons", "photons", "valence shells"],
-        "topic": "Atomic Weight",
-        "explanation": "Since electrons have negligible mass, atomic mass/weight is almost entirely determined by the sum of protons and neutrons in the nucleus."
+        "distractors": ["electrons", "orbitals", "photons"],
+        "topic": "Determinants of Atomic Weight",
+        "explanation": "Because electrons have negligible mass, an atom's atomic weight is determined almost entirely by the sum of its protons and neutrons."
     },
     {
         "q": "Atoms of the same element that contain the same number of protons but differ in their number of neutrons are called ____.",
         "a": "isotopes",
         "distractors": ["isomers", "allotropes", "monomers"],
         "topic": "Isotopes",
-        "explanation": "Isotopes are variants of a particular chemical element which differ in neutron number, and consequently in nucleon number."
+        "explanation": "Isotopes are variants of a specific chemical element having identical proton counts but different numbers of neutrons."
     },
     {
         "q": "Unstable isotopes that spontaneously break down over time and emit radiation or subatomic particles are called ____.",
         "a": "radioisotopes",
         "distractors": ["stable isotopes", "ions", "electrolytes"],
         "topic": "Radioisotopes",
-        "explanation": "Radioisotopes are radioactive isotopes that decay by emitting ionizing radiation (such as alpha, beta, or gamma rays)."
+        "explanation": "Radioisotopes are radioactive isotopes that decay spontaneously, emitting energetic radiation or particles."
     },
     {
-        "q": "A distinct chemical substance formed when two or more different elements chemically combine with properties entirely different from the parent elements is a ____.",
+        "q": "When radioisotopes decay and break down, they release particles or ____.",
+        "a": "radiation",
+        "distractors": ["ozone", "nitrogen gas", "glucose"],
+        "topic": "Radioactive Decay Emission",
+        "explanation": "The breakdown of unstable radioisotopes releases energy in the form of radiation or subatomic particles."
+    },
+
+    # =========================================================================
+    # PART 3: COMPOUNDS & CHEMICAL BONDS
+    # =========================================================================
+    {
+        "q": "When two or more different elements chemically combine, they form a new substance called a ____, which has totally different characteristics from the parent elements.",
         "a": "compound",
-        "distractors": ["mixture", "suspension", "colloid"],
+        "distractors": ["mixture", "isotope", "element"],
         "topic": "Chemical Compounds",
-        "explanation": "A compound is a chemical entity formed by bonding two or more elements, possessing unique chemical characteristics distinct from its components."
+        "explanation": "A compound is a substance formed when two or more elements combine chemically, acquiring completely novel chemical and physical properties."
     },
     {
-        "q": "A strong chemical bond formed when two or more atoms share electrons in their outer valence shells is a ____ bond.",
+        "q": "Atoms within chemical substances are held together through attractive forces known as chemical ____.",
+        "a": "bonds",
+        "distractors": ["gradients", "charges", "currents"],
+        "topic": "Chemical Bonds",
+        "explanation": "Chemical bonds are the attractive forces that link atoms together to create stable molecules and compounds."
+    },
+    {
+        "q": "The chemical bonds that hold atoms together in biological molecules are broadly categorized into ionic bonds and ____ bonds.",
         "a": "covalent",
-        "distractors": ["ionic", "hydrogen", "metallic"],
+        "distractors": ["metallic", "peptide", "hydrophobic"],
+        "topic": "Bond Categories",
+        "explanation": "Chemical bonds in biological systems are primarily categorized into covalent bonds and ionic bonds."
+    },
+    {
+        "q": "Chemical bonds that are formed when two or more atoms share electrons in their outer cells (outer shells) are ____ bonds.",
+        "a": "covalent",
+        "distractors": ["ionic", "hydrogen", "electrostatic"],
         "topic": "Covalent Bonds",
-        "explanation": "Covalent bonds involve the mutual sharing of valence electron pairs between atoms."
+        "explanation": "Covalent bonds form when atoms mutually share pairs of electrons in their outermost valence shells."
     },
     {
-        "q": "A chemical bond resulting from the complete transfer of valence electrons and the subsequent mutual attraction between oppositely charged ions is an ____ bond.",
+        "q": "Covalent bonds are specifically formed when two or more atoms share electrons located in their ____.",
+        "a": "outer shells",
+        "distractors": ["inner nucleus", "proton core", "neutron cloud"],
+        "topic": "Covalent Electron Sharing",
+        "explanation": "Covalent electron sharing occurs between the valence electrons located in the outermost electron shells (cells) of the interacting atoms."
+    },
+    {
+        "q": "Chemical bonds formed from the transfer of valence electrons and the resulting mutual attraction of oppositely charged ions are ____ bonds.",
         "a": "ionic",
-        "distractors": ["covalent", "peptide", "hydrogen"],
+        "distractors": ["covalent", "hydrogen", "disulfide"],
         "topic": "Ionic Bonds",
-        "explanation": "Ionic bonds form when one atom donates electrons to another, generating cations and anions that attract each other."
+        "explanation": "Ionic bonds result from the transfer of valence electrons, producing cations and anions whose opposite electrical charges attract."
+    },
+    {
+        "q": "Ionic bonds are fundamentally driven by the mutual attraction between ____ charged ions.",
+        "a": "oppositely",
+        "distractors": ["identically", "neutrally", "covalently"],
+        "topic": "Ionic Bond Attraction",
+        "explanation": "Ionic bonding occurs due to the electrostatic attraction between positively charged ions (cations) and negatively charged ions (anions)."
     },
 
-    # --- Part 3: The Role of Water ---
+    # =========================================================================
+    # PART 4: THE ROLE OF WATER
+    # =========================================================================
     {
-        "q": "Water can dissolve a wide range of biological solutes and exhibits high heat capacity because of the ____ of its molecules.",
-        "a": "polarity",
-        "distractors": ["viscosity", "nonpolar nature", "neutrality"],
-        "topic": "Water Polarity",
-        "explanation": "Polarity refers to the asymmetrical distribution of electrical charge, resulting in partial positive and negative poles in water."
+        "q": "Because water is capable of dissolving a vast variety of chemical substances, it is widely termed the universal biological ____.",
+        "a": "solvent",
+        "distractors": ["solute", "polymer", "buffer"],
+        "topic": "Water as Solvent",
+        "explanation": "Water's polar molecular structure enables it to dissolve a wide array of polar and ionic solutes, functioning as the body's primary solvent."
     },
     {
-        "q": "The weak electrostatic attraction between the slightly positive hydrogen atom of one water molecule and the slightly negative oxygen atom of another is a ____ bond.",
-        "a": "hydrogen",
-        "distractors": ["covalent", "ionic", "phosphodiester"],
-        "topic": "Hydrogen Bonds",
-        "explanation": "Hydrogen bonds occur when partially positive hydrogen atoms attract electronegative atoms (like oxygen or nitrogen) in adjacent molecules."
-    },
-    {
-        "q": "Water's ability to absorb substantial amounts of heat energy with minimal change in its own temperature is due to its high ____.",
+        "q": "Water can absorb large amounts of heat energy with minimal changes in its own temperature because it features a high ____.",
         "a": "heat capacity",
-        "distractors": ["surface tension", "vapor pressure", "viscosity"],
+        "distractors": ["density", "vapor pressure", "viscosity"],
         "topic": "Water Heat Capacity",
-        "explanation": "High heat capacity allows water to stabilize body temperature by buffering sudden environmental thermal shifts."
+        "explanation": "High heat capacity enables water to absorb and store thermal energy, stabilizing biological temperatures against fluctuations."
     },
     {
-        "q": "The property that makes sweating an effective physiological cooling mechanism for humans is water's high heat of ____.",
+        "q": "The property of water that enables perspiration to serve as an exceptionally effective cooling mechanism is its high heat of ____.",
         "a": "vaporization",
-        "distractors": ["fusion", "crystallization", "sublimation"],
+        "distractors": ["fusion", "condensation", "crystallization"],
         "topic": "Heat of Vaporization",
-        "explanation": "High heat of vaporization means evaporating water absorbs significant thermal energy, carrying heat away from the body surface."
+        "explanation": "Water's high heat of vaporization requires substantial thermal energy to convert liquid water into vapor, shedding body heat during sweating."
+    },
+    {
+        "q": "Water's distinctive qualities, such as its high heat capacity and solvent power, are due to its ability to form hydrogen bonds and the molecule's ____.",
+        "a": "polarity",
+        "distractors": ["nonpolar nature", "neutral charge", "linear geometry"],
+        "topic": "Water Polarity",
+        "explanation": "The polarity of the water molecule and its resulting ability to form hydrogen bonds account for water's unique thermal and chemical properties."
+    },
+    {
+        "q": "In water chemistry, polarity refers specifically to the presence of ____ charges within the water molecule.",
+        "a": "partial",
+        "distractors": ["ionic", "complete", "neutral"],
+        "topic": "Polarity Definition",
+        "explanation": "Polarity refers to the unequal distribution of shared electrons, causing partial negative charges on oxygen and partial positive charges on hydrogens."
+    },
+    {
+        "q": "The attraction between slightly positive and slightly negative charges of adjacent water molecules forms a ____ bond.",
+        "a": "hydrogen",
+        "distractors": ["covalent", "ionic", "peptide"],
+        "topic": "Hydrogen Bonds",
+        "explanation": "A hydrogen bond is an intermolecular attraction between the slightly positive hydrogen of one polar molecule and the slightly negative atom of another."
+    },
+    {
+        "q": "In a hydrogen bond between water molecules, the attraction occurs between slightly ____ and slightly negative charges.",
+        "a": "positive",
+        "distractors": ["neutral", "covalent", "identical"],
+        "topic": "Hydrogen Bond Charges",
+        "explanation": "Hydrogen bonds arise specifically from the electrical attraction between the slightly positive hydrogen atom and a slightly negative oxygen atom."
     },
 
-    # --- Part 4: Macromolecules & Biomolecules ---
+    # =========================================================================
+    # PART 5: MAJOR MOLECULES OF LIFE & BIOCHEMICAL REACTIONS
+    # =========================================================================
     {
-        "q": "Large biological molecules composed of thousands of covalently linked atoms organized into chains are called ____.",
+        "q": "Large biological molecules formed by thousands of atoms linked together into long chains are called ____.",
         "a": "macromolecules",
         "distractors": ["micelles", "microelements", "coenzymes"],
         "topic": "Macromolecules",
-        "explanation": "Macromolecules are giant biomolecules formed by linking smaller organic subunits into long chains."
+        "explanation": "Macromolecules are giant organic molecules constructed from thousands of covalently bonded atoms."
     },
     {
-        "q": "A complex macromolecule constructed from repeating, identical or similar molecular subunits joined together is a ____.",
-        "a": "polymer",
-        "distractors": ["monomer", "dimer", "monosaccharide"],
-        "topic": "Polymers & Monomers",
-        "explanation": "A polymer is a large macromolecule composed of repeated building blocks called monomers."
+        "q": "If macromolecules consist of small, repeating molecular subunits linked in a chain, they are identified as ____.",
+        "a": "polymers",
+        "distractors": ["monomers", "dimers", "electrolytes"],
+        "topic": "Polymers",
+        "explanation": "A polymer is a large macromolecule composed of repeated, linked chemical units called monomers."
     },
     {
-        "q": "The individual, small molecular building blocks that link together to assemble polymers are ____.",
+        "q": "The individual, small molecular building blocks that link together to form polymers are referred to as ____.",
         "a": "monomers",
-        "distractors": ["polymers", "complexes", "cofactors"],
+        "distractors": ["polymers", "complexes", "isomers"],
         "topic": "Monomers",
-        "explanation": "Monomers are the fundamental recurring units that polymerize to form polymers."
+        "explanation": "Monomers are the fundamental sub-units that undergo polymerization to assemble large polymers."
     },
     {
-        "q": "The chemical reaction that joins monomers together to build polymers by releasing a molecule of water is a ____ reaction.",
+        "q": "Chemical reactions that join monomers together to form polymers by eliminating water molecules are ____ reactions.",
         "a": "dehydration",
         "distractors": ["hydrolysis", "oxidation", "carboxylation"],
         "topic": "Dehydration Synthesis",
-        "explanation": "Dehydration synthesis (condensation reaction) removes water to covalently bond monomers into a growing polymer."
+        "explanation": "Dehydration synthesis (condensation) reactions link monomers into polymers through the removal of water."
     },
     {
-        "q": "The chemical reaction that breaks down polymers into individual monomers by consuming a molecule of water is a ____ reaction.",
+        "q": "Chemical reactions that break polymers down into individual monomers by consuming water molecules are ____ reactions.",
         "a": "hydrolysis",
-        "distractors": ["dehydration", "condensation", "reduction"],
-        "topic": "Hydrolysis",
-        "explanation": "Hydrolysis uses water molecules to cleave covalent bonds within polymers, breaking them down into constituent monomers."
+        "distractors": ["dehydration", "condensation", "polymerization"],
+        "topic": "Hydrolysis Reactions",
+        "explanation": "Hydrolysis reactions cleave chemical bonds within polymers by adding water molecules, splitting them back into monomers."
     },
     {
-        "q": "The four major classes of biological macromolecules essential for life are carbohydrates, proteins, nucleic acids, and ____.",
-        "a": "lipids",
-        "distractors": ["minerals", "vitamins", "electrolytes"],
+        "q": "In cellular biochemistry, while dehydration reactions form polymers, ____ reactions break polymers down.",
+        "a": "hydrolysis",
+        "distractors": ["dehydration", "synthesis", "anabolic"],
+        "topic": "Dehydration vs Hydrolysis",
+        "explanation": "Dehydration builds polymers by joining subunits, whereas hydrolysis breaks polymers down into smaller components."
+    },
+    {
+        "q": "The four major types of biomolecules essential to life are carbohydrates, proteins, nucleic acids, and ____.",
+        "a": "fats",
+        "distractors": ["vitamins", "minerals", "electrolytes"],
         "topic": "Four Major Biomolecules",
-        "explanation": "The four primary categories of biomolecules are carbohydrates, proteins, lipids (fats), and nucleic acids."
+        "explanation": "Living organisms are built from four classes of biological macromolecules: carbohydrates, proteins, fats (lipids), and nucleic acids."
     },
 
-    # --- Part 5: Carbohydrates ---
+    # =========================================================================
+    # PART 6: CARBOHYDRATES
+    # =========================================================================
     {
-        "q": "Biomolecules composed entirely of carbon, hydrogen, and oxygen that serve as the primary source of cellular fuel and energy are ____.",
+        "q": "Biomolecules made entirely of carbon, hydrogen, and oxygen that primarily provide fuel or energy for the human body are ____.",
         "a": "carbohydrates",
-        "distractors": ["lipids", "steroids", "nucleic acids"],
+        "distractors": ["lipids", "proteins", "nucleic acids"],
         "topic": "Carbohydrates Overview",
-        "explanation": "Carbohydrates (sugars and starches) are made of C, H, and O and function primarily as accessible energy sources for the body."
+        "explanation": "Carbohydrates are composed of C, H, and O and function as the body's premier source of cellular fuel and metabolic energy."
     },
     {
-        "q": "The simplest carbohydrate units, consisting of single sugar molecules containing three to seven carbon atoms, are ____.",
+        "q": "Common dietary examples of carbohydrates include starches and ____.",
+        "a": "sugars",
+        "distractors": ["amino acids", "steroids", "triglycerides"],
+        "topic": "Carbohydrate Examples",
+        "explanation": "Sugars and starches represent the primary nutritional forms of carbohydrate biomolecules."
+    },
+    {
+        "q": "Carbohydrates are classified into three major hierarchical groups: monosaccharides, polysaccharides, and ____.",
+        "a": "oligosaccharides",
+        "distractors": ["fatty acids", "phospholipids", "polypeptides"],
+        "topic": "Carbohydrate Classification",
+        "explanation": "Carbohydrates are grouped into monosaccharides (single sugars), oligosaccharides (short chains), and polysaccharides (complex chains)."
+    },
+    {
+        "q": "The simplest carbohydrate units, commonly referred to as simple sugars, are ____.",
         "a": "monosaccharides",
-        "distractors": ["polysaccharides", "oligosaccharides", "triglycerides"],
+        "distractors": ["polysaccharides", "disaccharides", "oligosaccharides"],
         "topic": "Monosaccharides",
-        "explanation": "Monosaccharides, or simple sugars, are single-ring sugar molecules containing 3 to 7 carbon atoms."
+        "explanation": "Monosaccharides are the basic monomeric sugar units, also called simple sugars."
     },
     {
-        "q": "Six-carbon simple sugars like glucose, fructose, and galactose are classified based on their carbon count as ____.",
+        "q": "Monosaccharides are categorized by the number of carbon atoms in their ring, which ranges from three to ____ carbon atoms.",
+        "a": "seven",
+        "distractors": ["four", "ten", "twelve"],
+        "topic": "Monosaccharide Carbon Range",
+        "explanation": "Monosaccharides are classified by their carbon backbone length, which spans from 3 to 7 carbon atoms."
+    },
+    {
+        "q": "Monosaccharides containing six carbon atoms, such as glucose, fructose, and galactose, are classified as ____.",
         "a": "hexoses",
         "distractors": ["pentoses", "trioses", "heptoses"],
         "topic": "Hexose Sugars",
-        "explanation": "Hexoses are monosaccharides containing six carbon atoms (C6H12O6), including glucose, fructose, and galactose."
+        "explanation": "Hexoses are six-carbon monosaccharides (C6H12O6), including glucose, fructose, and galactose."
     },
     {
-        "q": "The six-carbon monosaccharide abundant in carbohydrates that circulates in the blood as the primary fuel for human cells is ____.",
+        "q": "The hexose monosaccharide noted for being rich in carbohydrates and circulating as the primary fuel for human cells is ____.",
         "a": "glucose",
-        "distractors": ["sucrose", "ribose", "cellulose"],
+        "distractors": ["ribose", "sucrose", "cellulose"],
         "topic": "Glucose",
-        "explanation": "Glucose is the essential blood sugar hexose utilized directly by cells for cellular respiration."
+        "explanation": "Glucose is the six-carbon hexose that serves as the central fuel molecule for cellular respiration in human tissues."
     },
     {
-        "q": "The hexose monosaccharide naturally found in abundance in fruits and vegetables is ____.",
+        "q": "The hexose monosaccharide naturally seen and found in abundance in fruits and vegetables is ____.",
         "a": "fructose",
         "distractors": ["galactose", "maltose", "glycogen"],
         "topic": "Fructose",
-        "explanation": "Fructose is a fruit sugar hexose found predominantly in fruits and vegetables."
+        "explanation": "Fructose is a six-carbon hexose found naturally in fruits, honey, and vegetables."
     },
     {
-        "q": "The hexose monosaccharide commonly found as a component of the disaccharide lactose in dairy products is ____.",
+        "q": "The hexose monosaccharide commonly seen in dairy products is ____.",
         "a": "galactose",
-        "distractors": ["glycogen", "starch", "ribose"],
+        "distractors": ["fructose", "ribose", "starch"],
         "topic": "Galactose",
-        "explanation": "Galactose is a six-carbon hexose prominent in dairy products."
+        "explanation": "Galactose is a six-carbon hexose sugar abundant in milk and dairy products as part of lactose."
     },
     {
-        "q": "The five-carbon monosaccharide (pentose) that forms an integral structural component of RNA nucleotides is ____.",
+        "q": "The five-carbon monosaccharide that is classified as a pentose sugar is ____.",
         "a": "ribose",
-        "distractors": ["glucose", "fructose", "sucrose"],
+        "distractors": ["glucose", "galactose", "fructose"],
         "topic": "Ribose",
-        "explanation": "Ribose is a 5-carbon pentose sugar found in ribonucleic acid (RNA) and ATP."
+        "explanation": "Ribose is a 5-carbon pentose sugar that forms an integral component of RNA and ATP."
     },
     {
-        "q": "Short carbohydrate chains consisting of a few monosaccharides joined by dehydration synthesis are called ____.",
+        "q": "A five-carbon simple sugar, such as ribose, is scientifically termed a ____.",
+        "a": "pentose",
+        "distractors": ["hexose", "triose", "tetrose"],
+        "topic": "Pentose Definition",
+        "explanation": "Pentoses are monosaccharides containing exactly five carbon atoms."
+    },
+    {
+        "q": "Carbohydrate chains composed of a few monosaccharides joined together by dehydration synthesis are called ____.",
         "a": "oligosaccharides",
-        "distractors": ["polysaccharides", "monomers", "phospholipids"],
+        "distractors": ["monosaccharides", "polysaccharides", "lipids"],
         "topic": "Oligosaccharides",
-        "explanation": "Oligosaccharides are carbohydrate polymers composed of a small number of linked monosaccharide units."
+        "explanation": "Oligosaccharides are short polymers consisting of a few monosaccharide units linked by glycosidic bonds."
     },
     {
-        "q": "A double sugar formed when two monosaccharides are linked together by a covalent bond is a ____.",
-        "a": "disaccharide",
-        "distractors": ["monosaccharide", "polysaccharide", "hexose"],
+        "q": "Oligosaccharides are categorized and classified based on the number of ____ present per chain.",
+        "a": "subunits",
+        "distractors": ["electrons", "double bonds", "peptide links"],
+        "topic": "Oligosaccharide Classification",
+        "explanation": "Oligosaccharides are classified by the exact number of monosaccharide subunits in their chain (e.g., disaccharides, trisaccharides)."
+    },
+    {
+        "q": "Double sugars that form when two monosaccharides covalently bond to each other through dehydration synthesis are ____.",
+        "a": "disaccharides",
+        "distractors": ["polysaccharides", "hexoses", "pentoses"],
         "topic": "Disaccharides",
-        "explanation": "Disaccharides are formed by covalently joining two monosaccharides through dehydration synthesis."
+        "explanation": "A disaccharide is a carbohydrate formed by covalently linking two monosaccharide units."
     },
     {
-        "q": "Common household table sugar is a disaccharide chemically known as ____.",
+        "q": "A classic example of a disaccharide, commonly known as household table sugar, is ____.",
         "a": "sucrose",
-        "distractors": ["lactose", "maltose", "cellulose"],
+        "distractors": ["glucose", "cellulose", "glycogen"],
         "topic": "Sucrose",
-        "explanation": "Sucrose is a disaccharide formed from one glucose and one fructose molecule."
+        "explanation": "Sucrose (table sugar) is a disaccharide made of one glucose molecule bonded to one fructose molecule."
     },
     {
-        "q": "Extensive carbohydrate macromolecules formed by linking numerous monosaccharides into long, complex chains are ____.",
+        "q": "Complex carbohydrates wherein monosaccharides join together in longer and more extensive chains are ____.",
         "a": "polysaccharides",
-        "distractors": ["disaccharides", "peptides", "triglycerides"],
+        "distractors": ["disaccharides", "oligosaccharides", "hexoses"],
         "topic": "Polysaccharides",
-        "explanation": "Polysaccharides are large polymers made of many monosaccharide subunits."
+        "explanation": "Polysaccharides are large, complex macromolecules composed of hundreds or thousands of monosaccharide units."
     },
     {
-        "q": "The primary storage polysaccharide in plants, consisting of long chains of linked glucose units, is ____.",
+        "q": "Polysaccharides are categorized based on their biological function into two main types: structural and ____.",
+        "a": "storage",
+        "distractors": ["catalytic", "transport", "amphipathic"],
+        "topic": "Polysaccharide Functional Classes",
+        "explanation": "Polysaccharides are functionally categorized as either storage polysaccharides (energy reserves) or structural polysaccharides (support)."
+    },
+    {
+        "q": "Polysaccharides that function to store energy for future physiological use are classified as ____ polysaccharides.",
+        "a": "storage",
+        "distractors": ["structural", "genetic", "hormonal"],
+        "topic": "Storage Polysaccharides",
+        "explanation": "Storage polysaccharides sequester glucose molecules in compact forms for future metabolic breakdown."
+    },
+    {
+        "q": "The primary storage polysaccharide found in plants is ____.",
         "a": "starch",
         "distractors": ["glycogen", "cellulose", "chitin"],
         "topic": "Starch",
-        "explanation": "Starch is the primary energy storage polysaccharide synthesized by plant cells."
+        "explanation": "Starch is the primary energy storage polysaccharide synthesized by plants."
     },
     {
-        "q": "The primary storage polysaccharide in animals and humans, stored predominantly in the liver and skeletal muscles, is ____.",
+        "q": "The primary storage polysaccharide found in animals, stored in liver and muscle tissue, is ____.",
         "a": "glycogen",
         "distractors": ["starch", "cellulose", "sucrose"],
         "topic": "Glycogen",
-        "explanation": "Glycogen is the animal storage form of glucose, found in abundance in liver and muscle tissue."
+        "explanation": "Glycogen is the major glucose storage polymer utilized by animals and humans."
     },
     {
-        "q": "The rigid structural polysaccharide found in plant cell walls, commonly present in bamboo, jute, and cotton, is ____.",
+        "q": "Polysaccharides that provide physical strength and mechanical support in organisms are classified as ____ polysaccharides.",
+        "a": "structural",
+        "distractors": ["storage", "enzymatic", "nutritional"],
+        "topic": "Structural Polysaccharides",
+        "explanation": "Structural polysaccharides form tough fibrous networks that give cells and organisms structural rigidity."
+    },
+    {
+        "q": "The structural polysaccharide that provides strength in organisms and is seen in materials like bamboo, jute, and cotton is ____.",
         "a": "cellulose",
-        "distractors": ["glycogen", "starch", "glucose"],
+        "distractors": ["glycogen", "starch", "amylose"],
         "topic": "Cellulose",
-        "explanation": "Cellulose provides structural rigidity in plants and cannot be digested by human enzymes, acting as dietary fiber."
+        "explanation": "Cellulose is an unbranched polymer of glucose that forms plant cell walls and fibers in bamboo, jute, and cotton."
+    },
+    {
+        "q": "Plant materials such as bamboo, jute, and cotton are highlighted as prominent examples containing the structural carbohydrate ____.",
+        "a": "cellulose",
+        "distractors": ["glycogen", "sucrose", "galactose"],
+        "topic": "Cellulose Examples",
+        "explanation": "Bamboo, jute, and cotton are natural fibrous materials composed predominantly of cellulose."
     },
 
-    # --- Part 6: Lipids & Fats ---
+    # =========================================================================
+    # PART 7: FATS / LIPIDS
+    # =========================================================================
     {
-        "q": "Water-insoluble organic biomolecules that are hydrophobic due to their nonpolar nature are ____.",
+        "q": "Organic biomolecules that do not dissolve in water due to their nonpolar nature are ____.",
         "a": "lipids",
         "distractors": ["carbohydrates", "proteins", "nucleic acids"],
         "topic": "Lipids Overview",
-        "explanation": "Lipids are nonpolar organic molecules that do not dissolve in polar solvents like water."
+        "explanation": "Lipids (fats) are hydrophobic organic compounds that are insoluble in water because of their nonpolar hydrocarbon chains."
     },
     {
-        "q": "The three classes of lipids essential to human physiological health are phospholipids, steroids, and ____.",
+        "q": "The three types of lipids that are critically important to human health are phospholipids, steroids, and ____.",
         "a": "triglycerides",
-        "distractors": ["polysaccharides", "peptides", "coenzymes"],
-        "topic": "Lipid Classes",
-        "explanation": "The three major human lipid classes are triglycerides (fats/oils), phospholipids, and steroids."
+        "distractors": ["polysaccharides", "amino acids", "peptides"],
+        "topic": "Three Lipid Types",
+        "explanation": "The three major classes of biologically important lipids are triglycerides, phospholipids, and steroids."
     },
     {
-        "q": "A triglyceride molecule is constructed from one molecule of glycerol chemically bonded to three ____.",
+        "q": "A triglyceride molecule is comprised of one molecule of glycerol chemically bonded to three ____.",
         "a": "fatty acids",
-        "distractors": ["amino acids", "nucleotides", "monosaccharides"],
-        "topic": "Triglyceride Structure",
-        "explanation": "Triglycerides consist of a single glycerol backbone esterified with three fatty acid tails."
+        "distractors": ["amino acids", "nucleotides", "phosphate groups"],
+        "topic": "Triglyceride Composition",
+        "explanation": "Triglycerides are formed by esterifying three fatty acid chains to a single glycerol backbone."
     },
     {
-        "q": "A fatty acid chain that contains no double bonds between carbon atoms and is fully saturated with hydrogens is a ____ fatty acid.",
+        "q": "Fatty acids are chains of carbon atoms bonded to hydrogens that feature the functional group ____ at one end of the chain.",
+        "a": "COOH",
+        "distractors": ["NH2", "PO4", "OH"],
+        "topic": "Fatty Acid Functional Group",
+        "explanation": "Fatty acids consist of a long hydrocarbon tail capped at one end by a carboxyl group (-COOH)."
+    },
+    {
+        "q": "In fatty acid chemical structure, chains of carbon atoms are covalently bonded to ____.",
+        "a": "hydrogens",
+        "distractors": ["nitrogens", "sulfurs", "phosphates"],
+        "topic": "Fatty Acid Hydrocarbon Chain",
+        "explanation": "Fatty acid tails consist of long hydrocarbon chains where carbon atoms are bonded to hydrogen atoms."
+    },
+    {
+        "q": "Fatty acids are categorized into saturated and unsaturated based on the presence of ____.",
+        "a": "double bonds",
+        "distractors": ["ring structures", "phosphate groups", "amino groups"],
+        "topic": "Fatty Acid Classification",
+        "explanation": "Fatty acids are classified as saturated or unsaturated depending on whether double bonds are present between carbon atoms."
+    },
+    {
+        "q": "If no double bonds are present between carbon atoms in a fatty acid chain, it is called a ____ fatty acid.",
         "a": "saturated",
         "distractors": ["unsaturated", "polyunsaturated", "trans"],
         "topic": "Saturated Fatty Acids",
-        "explanation": "Saturated fatty acids possess only single carbon-carbon bonds, maximizing the number of bonded hydrogen atoms."
+        "explanation": "Saturated fatty acids contain only single bonds between carbons, holding the maximum possible number of hydrogen atoms."
     },
     {
-        "q": "A fatty acid chain that contains one or more double bonds between carbon atoms is classified as an ____ fatty acid.",
+        "q": "If there is at least one double bond present in a fatty acid chain, it is classified as an ____ fatty acid.",
         "a": "unsaturated",
         "distractors": ["saturated", "solid", "hydrogenated"],
         "topic": "Unsaturated Fatty Acids",
-        "explanation": "Unsaturated fatty acids feature at least one double bond in their carbon chain, introducing kinks in the tail."
+        "explanation": "Unsaturated fatty acids contain one or more carbon-carbon double bonds, creating bends or kinks in the tail."
     },
     {
-        "q": "Triglycerides serve as critical long-term energy reservoirs in animals because per gram, they yield ____ the energy of carbohydrates.",
+        "q": "Common dietary examples of triglycerides include fats and ____.",
+        "a": "oils",
+        "distractors": ["starches", "vitamins", "sugars"],
+        "topic": "Triglyceride Examples",
+        "explanation": "Triglycerides manifest dietary-wise as solid fats (usually animal-derived) and liquid oils (usually plant-derived)."
+    },
+    {
+        "q": "Triglycerides serve as important storage compounds in animals because per gram, they store ____ the energy of carbohydrates.",
         "a": "twice",
-        "distractors": ["half", "ten times", "equal"],
-        "topic": "Energy Density of Fats",
-        "explanation": "Triglycerides store roughly 9 kcal/gram, more than twice the energy per gram of carbohydrates or proteins (4 kcal/gram)."
+        "distractors": ["half", "ten times", "the same"],
+        "topic": "Energy Density of Triglycerides",
+        "explanation": "Lipids store roughly 9 kcal/g, which is more than twice the caloric energy density of carbohydrates or proteins (4 kcal/g)."
     },
     {
-        "q": "Lipid molecules that contain both a hydrophilic polar head and two hydrophobic nonpolar fatty acid tails are described as ____.",
+        "q": "The most common type of fat found in the human body is the ____.",
+        "a": "triglyceride",
+        "distractors": ["steroid", "phospholipid", "wax"],
+        "topic": "Most Common Body Fat",
+        "explanation": "Triglycerides represent the predominant form of stored body fat in human adipose tissue."
+    },
+    {
+        "q": "Triglycerides in the human body come from dietary foods you eat, especially butter, other fats, and ____.",
+        "a": "oils",
+        "distractors": ["fruits", "vegetables", "grains"],
+        "topic": "Dietary Sources of Triglycerides",
+        "explanation": "Dietary triglycerides originate from foods rich in fats, notably butter, oils, margarine, and animal fats."
+    },
+    {
+        "q": "A phospholipid molecule is comprised of a glycerol molecule bonded to a negatively charged phosphate group and ____ fatty acids.",
+        "a": "two",
+        "distractors": ["three", "one", "four"],
+        "topic": "Phospholipid Composition",
+        "explanation": "Phospholipids consist of a glycerol backbone bonded to two fatty acid tails and one phosphate head."
+    },
+    {
+        "q": "Attached to the negatively charged phosphate group of a phospholipid is often a small molecule known as the ____ group.",
+        "a": "variable",
+        "distractors": ["peptide", "steroid", "monomer"],
+        "topic": "Phospholipid Variable Group",
+        "explanation": "Phospholipids typically have a variable organic group (such as choline or serine) attached to their phosphate head."
+    },
+    {
+        "q": "Molecules that possess both hydrophobic (water-repelling) and hydrophilic (water-loving) regions are described as ____.",
         "a": "amphipathic",
         "distractors": ["hydrophobic", "hydrophilic", "nonpolar"],
-        "topic": "Phospholipid Amphipathic Nature",
-        "explanation": "Amphipathic molecules feature both water-attracting (hydrophilic) and water-repelling (hydrophobic) regions."
+        "topic": "Amphipathic Nature",
+        "explanation": "Amphipathic molecules feature dual chemical affinities, having both polar/charged hydrophilic and nonpolar hydrophobic domains."
     },
     {
-        "q": "The major structural lipid component of biological plasma membranes is the ____.",
-        "a": "phospholipid",
-        "distractors": ["triglyceride", "starch", "glycogen"],
-        "topic": "Phospholipids in Membranes",
-        "explanation": "Phospholipids self-assemble into a bilayer that forms the structural basis of cellular plasma membranes."
+        "q": "Because phospholipids are amphipathic, they function as fundamental structural components of the ____ membrane.",
+        "a": "plasma",
+        "distractors": ["nuclear pore", "ribosome", "cell wall"],
+        "topic": "Plasma Membrane Phospholipids",
+        "explanation": "The amphipathic nature of phospholipids drives them to self-assemble into the lipid bilayer of cellular plasma membranes."
     },
     {
-        "q": "A class of lipids characterized by a molecular structure composed of four interconnected carbon rings is ____.",
-        "a": "steroids",
-        "distractors": ["triglycerides", "phospholipids", "hexoses"],
-        "topic": "Steroids",
-        "explanation": "Steroids are lipid molecules recognized by their characteristic four fused carbon rings."
+        "q": "Steroids are a distinctive class of lipids whose core molecular structure is composed of ____ carbon rings.",
+        "a": "four",
+        "distractors": ["two", "six", "three"],
+        "topic": "Steroid Ring Structure",
+        "explanation": "Steroids are characterized by a fused carbon skeleton consisting of four interconnected rings (three six-carbon rings and one five-carbon ring)."
     },
     {
-        "q": "The essential steroid that integrates into plasma membranes and serves as the precursor for sex hormones like estrogen and testosterone is ____.",
+        "q": "In steroid molecular architecture, specific parts of the four carbon rings are attached to ____ molecules.",
+        "a": "variable",
+        "distractors": ["glycerol", "nucleotide", "polypeptide"],
+        "topic": "Steroid Variable Molecules",
+        "explanation": "Different steroids vary according to the specific variable chemical groups attached to their core four carbon rings."
+    },
+    {
+        "q": "The essential steroid that is an integral component of the plasma membrane and serves as the precursor for other steroid hormones is ____.",
         "a": "cholesterol",
-        "distractors": ["glycerol", "cellulose", "insulin"],
+        "distractors": ["triglyceride", "glycogen", "insulin"],
         "topic": "Cholesterol",
-        "explanation": "Cholesterol maintains membrane fluidity and serves as the biochemical backbone for steroid hormones."
+        "explanation": "Cholesterol stabilizes the fluidity of cell membranes and acts as the biosynthetic foundation for steroid hormones."
+    },
+    {
+        "q": "Cholesterol serves as the biochemical foundation for synthesizing essential steroid hormones such as testosterone and ____.",
+        "a": "estrogen",
+        "distractors": ["adrenaline", "thyroxine", "insulin"],
+        "topic": "Steroid Hormones",
+        "explanation": "Steroid hormones, including estrogen, progesterone, and testosterone, are synthesized biochemically from cholesterol."
     },
 
-    # --- Part 7: Proteins & Amino Acids ---
+    # =========================================================================
+    # PART 8: PROTEINS & AMINO ACIDS
+    # =========================================================================
     {
-        "q": "Polymers composed of specific sequences of 20 different building blocks linked by peptide bonds are ____.",
+        "q": "Polymers comprised from a selection of 20 different building blocks linked together to form chains are ____.",
         "a": "proteins",
         "distractors": ["polysaccharides", "lipids", "nucleic acids"],
         "topic": "Proteins Overview",
-        "explanation": "Proteins are versatile biopolymers made from chains of amino acid residues."
+        "explanation": "Proteins are complex macromolecules assembled from chains of 20 standard amino acid monomers."
     },
     {
-        "q": "The basic building block of all proteins is the ____.",
+        "q": "The fundamental monomeric building block of all proteins is the ____.",
         "a": "amino acid",
         "distractors": ["fatty acid", "monosaccharide", "nucleotide"],
         "topic": "Amino Acids",
-        "explanation": "Amino acids are the organic monomers that link together to synthesize polypeptide chains."
+        "explanation": "Amino acids are the building blocks that polymerize to form polypeptide chains and functional proteins."
     },
     {
-        "q": "Every amino acid features a central carbon atom bonded to a hydrogen atom, an amino group, a side chain, and an acidic ____ group.",
+        "q": "Every amino acid is structured around a central ____ atom bound to a hydrogen atom, an amino group, a carboxyl group, and a side chain.",
+        "a": "carbon",
+        "distractors": ["oxygen", "nitrogen", "phosphorus"],
+        "topic": "Central Carbon Atom",
+        "explanation": "An amino acid features a central alpha-carbon (C) atom to which all its functional groups attach."
+    },
+    {
+        "q": "In an amino acid, the functional group containing nitrogen bound to hydrogens (-NH2) is the ____ group.",
+        "a": "amino",
+        "distractors": ["carboxyl", "hydroxyl", "phosphate"],
+        "topic": "Amino Group",
+        "explanation": "The amino group (-NH2) is the basic, nitrogen-containing component of an amino acid."
+    },
+    {
+        "q": "In an amino acid, the acidic functional group bound to the central carbon is the ____ group.",
         "a": "carboxyl",
-        "distractors": ["phosphate", "hydroxyl", "methyl"],
-        "topic": "Amino Acid Structure",
-        "explanation": "Amino acids have a central alpha-carbon bonded to -H, an amino group (-NH2), a carboxyl group (-COOH), and an R-group."
+        "distractors": ["amino", "phosphate", "methyl"],
+        "topic": "Carboxyl Group",
+        "explanation": "The carboxyl group (-COOH) is the acidic chemical moiety bound to the alpha-carbon of amino acids."
     },
     {
-        "q": "The distinctive portion of an amino acid molecule that gives it unique chemical characteristics and differentiates it from all other amino acids is the ____.",
+        "q": "The specific part of an amino acid molecule that differentiates it from all other amino acids is the ____.",
         "a": "side chain",
-        "distractors": ["amino group", "carboxyl group", "central carbon"],
-        "topic": "Amino Acid Side Chain (R Group)",
-        "explanation": "The side chain (R-group) varies among the 20 amino acids, conferring specific charge, polarity, and reactivity."
+        "distractors": ["central carbon", "amino group", "carboxyl group"],
+        "topic": "Side Chain (R Group)",
+        "explanation": "The side chain (R-group) is the unique variable group that confers distinctive chemical properties to each of the 20 amino acids."
     },
     {
-        "q": "Amino acids that the human body can synthesize endogenously from glucose metabolism are classified as ____ amino acids.",
+        "q": "Amino acids are classified into essential and non-essential based on the ability of the ____ to produce it.",
+        "a": "body",
+        "distractors": ["diet", "climate", "bacteria"],
+        "topic": "Amino Acid Classification Basis",
+        "explanation": "Amino acids are categorized based on whether the human body possesses the metabolic pathways to synthesize them."
+    },
+    {
+        "q": "Amino acids that can be produced endogenously by the human body through glucose synthesis are classified as ____ amino acids.",
         "a": "non-essential",
         "distractors": ["essential", "exogenous", "dietary"],
         "topic": "Non-Essential Amino Acids",
-        "explanation": "There are 11 non-essential amino acids that the human body can synthesize on its own."
+        "explanation": "Non-essential amino acids are those that the human body can synthesize internally, so they are not strictly required in the diet."
     },
     {
-        "q": "Amino acids that cannot be produced by the human body and must be acquired through dietary sources like meat, eggs, and fish are ____ amino acids.",
+        "q": "The human body is able to produce non-essential amino acids endogenously through the synthesis of ____.",
+        "a": "glucose",
+        "distractors": ["fats", "steroids", "nucleotides"],
+        "topic": "Glucose Synthesis of Amino Acids",
+        "explanation": "Non-essential amino acids are biosynthesized using carbon skeletons derived from glucose metabolism."
+    },
+    {
+        "q": "Out of the 20 standard amino acids, there are ____ non-essential amino acids that the body can synthesize.",
+        "a": "11",
+        "distractors": ["9", "20", "4"],
+        "topic": "Count of Non-Essential Amino Acids",
+        "explanation": "There are 11 non-essential amino acids (alanine, arginine, asparagine, aspartic acid, cysteine, glutamic acid, glutamine, glycine, proline, serine, and tyrosine)."
+    },
+    {
+        "q": "Which of the following is an amino acid explicitly classified in the lecture notes as a non-essential amino acid?",
+        "a": "alanine",
+        "distractors": ["histidine", "leucine", "valine"],
+        "topic": "Non-Essential Amino Acid Example",
+        "explanation": "Alanine is one of the 11 non-essential amino acids synthesized by the human body."
+    },
+    {
+        "q": "Amino acids that cannot be produced by the body and must be supplied through dietary food intake are ____ amino acids.",
         "a": "essential",
         "distractors": ["non-essential", "endogenous", "synthetic"],
         "topic": "Essential Amino Acids",
-        "explanation": "The 9 essential amino acids cannot be synthesized by human cells and must be ingested."
+        "explanation": "Essential amino acids cannot be synthesized by human cells and must be obtained from food."
     },
     {
-        "q": "The specific, linear sequence of amino acids linked together in a polypeptide chain represents a protein's ____ structure.",
+        "q": "There are ____ essential amino acids that must be obtained from dietary sources.",
+        "a": "9",
+        "distractors": ["11", "20", "5"],
+        "topic": "Count of Essential Amino Acids",
+        "explanation": "There are 9 essential amino acids: histidine, isoleucine, leucine, lysine, methionine, phenylalanine, threonine, tryptophan, and valine."
+    },
+    {
+        "q": "Essential amino acids must be consumed through dietary sources like fish, poultry, egg, and ____.",
+        "a": "meat",
+        "distractors": ["sugar", "cellulose", "starch"],
+        "topic": "Dietary Sources of Essential Amino Acids",
+        "explanation": "Complete dietary protein sources rich in essential amino acids include meat, poultry, fish, and eggs."
+    },
+    {
+        "q": "Which of the following is an amino acid explicitly classified in the lecture notes as an essential amino acid?",
+        "a": "valine",
+        "distractors": ["glycine", "alanine", "serine"],
+        "topic": "Essential Amino Acid Example",
+        "explanation": "Valine is one of the 9 essential amino acids that must be acquired through the diet."
+    },
+    {
+        "q": "Proteins exhibit structural organization categorized into ____ hierarchical levels.",
+        "a": "four",
+        "distractors": ["three", "two", "five"],
+        "topic": "Four Levels of Protein Structure",
+        "explanation": "Protein structure is organized into four levels: primary, secondary, tertiary, and quaternary."
+    },
+    {
+        "q": "The specific, linear sequence of amino acids in a polypeptide chain constitutes a protein's ____ structure.",
         "a": "primary",
         "distractors": ["secondary", "tertiary", "quaternary"],
         "topic": "Primary Protein Structure",
-        "explanation": "Primary structure is the unique linear sequence of amino acids, as seen in hormones like insulin."
+        "explanation": "Primary structure is the unique linear sequence of covalently linked amino acids in a polypeptide."
     },
     {
-        "q": "The folding of an amino acid chain into alpha-helices or beta-pleated sheets due to hydrogen bonding represents the ____ structure of a protein.",
+        "q": "A specific biological protein cited in the lecture notes as an example of a defined primary structure is ____.",
+        "a": "insulin",
+        "distractors": ["hemoglobin", "DNA polymerase", "cellulose"],
+        "topic": "Insulin Primary Structure",
+        "explanation": "Insulin is the classic hormone referenced for its precisely sequenced primary chain of amino acids."
+    },
+    {
+        "q": "The structural level resulting from the localized bending and coiling of an amino acid chain into pleated sheets or helices is the ____ structure.",
         "a": "secondary",
         "distractors": ["primary", "tertiary", "quaternary"],
         "topic": "Secondary Protein Structure",
-        "explanation": "Secondary structure refers to localized folding into alpha-helices or beta-pleated sheets."
+        "explanation": "Secondary structure results from hydrogen bonding along the polypeptide backbone, creating alpha-helices and beta-pleated sheets."
     },
     {
-        "q": "The overall three-dimensional globular conformation of a single polypeptide chain, characteristic of functional enzymes, is its ____ structure.",
+        "q": "Secondary protein structure results from polypeptide chains bending and coiling into either helices or ____ sheets.",
+        "a": "pleated",
+        "distractors": ["globular", "amphipathic", "variable"],
+        "topic": "Pleated Sheets",
+        "explanation": "The two predominant secondary conformations are alpha-helices and beta-pleated sheets."
+    },
+    {
+        "q": "In the study of secondary protein structure, helices and pleated sheets are associated with amino acid derivatives including proline, hydroxyproline, sarcosine, and ____ acid.",
+        "a": "pipecolic",
+        "distractors": ["aspartic", "glutamic", "citric"],
+        "topic": "Pipecolic Acid in Secondary Structure",
+        "explanation": "The lecture text explicitly associates secondary structural bending and coiling with proline, hydroxyproline, pipecolic acid, and sarcosine."
+    },
+    {
+        "q": "Proline, hydroxyproline, pipecolic acid, and sarcosine are specifically noted in the text in relation to ____ protein structure.",
+        "a": "secondary",
+        "distractors": ["primary", "tertiary", "quaternary"],
+        "topic": "Secondary Structure Amino Acids",
+        "explanation": "These specific imino and amino acid residues influence the formation of secondary structural helices and sheets."
+    },
+    {
+        "q": "The overall three-dimensional shape of a single folded protein chain is its ____ structure.",
         "a": "tertiary",
         "distractors": ["primary", "secondary", "quaternary"],
         "topic": "Tertiary Protein Structure",
-        "explanation": "Tertiary structure is the full 3D spatial conformation of a single folded polypeptide."
+        "explanation": "Tertiary structure represents the complete 3D spatial conformation of a folded polypeptide chain."
     },
     {
-        "q": "The complex protein structure produced when two or more individual polypeptide subunits join together, as seen in hemoglobin, is the ____ structure.",
+        "q": "Tertiary protein structure is functionally observed in transport proteins and ____.",
+        "a": "enzymes",
+        "distractors": ["steroids", "triglycerides", "monosaccharides"],
+        "topic": "Tertiary Structure Examples",
+        "explanation": "Enzymes and membrane transport proteins rely on precise tertiary three-dimensional conformations to perform their functions."
+    },
+    {
+        "q": "Proteins that facilitate movement across membranes and exhibit characteristic three-dimensional tertiary shapes include enzymes and ____ proteins.",
+        "a": "transport",
+        "distractors": ["storage", "structural", "fibrous"],
+        "topic": "Transport Proteins",
+        "explanation": "Transport proteins possess specific 3D tertiary conformations allowing them to shuttle solutes across membranes."
+    },
+    {
+        "q": "The complex protein structure produced when attractive forces link multiple polypeptide chains (subunits) together is ____ structure.",
         "a": "quaternary",
         "distractors": ["tertiary", "secondary", "primary"],
         "topic": "Quaternary Protein Structure",
-        "explanation": "Quaternary structure exists when a protein is composed of multiple interacting polypeptide subunits (e.g., hemoglobin, DNA polymerase)."
+        "explanation": "Quaternary structure is formed when two or more polypeptide subunits associate into a multi-subunit functional complex."
+    },
+    {
+        "q": "Quaternary protein structure is distinguished by being comprised of multiple ____ chains.",
+        "a": "polypeptide",
+        "distractors": ["fatty acid", "monosaccharide", "polysaccharide"],
+        "topic": "Polypeptide Subunits",
+        "explanation": "Quaternary proteins consist of two or more independent polypeptide chains joined by non-covalent or covalent bonds."
+    },
+    {
+        "q": "The oxygen-binding protein in red blood cells that is cited as a classic example of quaternary structure is ____.",
+        "a": "hemoglobin",
+        "distractors": ["insulin", "myoglobin", "collagen"],
+        "topic": "Hemoglobin Quaternary Structure",
+        "explanation": "Hemoglobin is composed of four polypeptide subunits (two alpha and two beta chains), exhibiting quaternary structure."
+    },
+    {
+        "q": "The multi-subunit enzyme responsible for synthesizing new DNA strands, cited as an example of quaternary structure, is ____.",
+        "a": "DNA polymerase",
+        "distractors": ["ribonuclease", "pepsin", "lactase"],
+        "topic": "DNA Polymerase Quaternary Structure",
+        "explanation": "DNA polymerase is a complex multi-subunit holoenzyme with quaternary structure."
+    },
+    {
+        "q": "Transmembrane protein assemblies that regulate electrical potential and ion passage, cited as an example of quaternary structure, are ____.",
+        "a": "ion channels",
+        "distractors": ["phospholipids", "steroid receptors", "chitin fibers"],
+        "topic": "Ion Channels Quaternary Structure",
+        "explanation": "Ion channels are multi-subunit protein complexes that span biological membranes, exemplifying quaternary architecture."
     },
 
-    # --- Part 8: Enzymes ---
+    # =========================================================================
+    # PART 9: ENZYMES
+    # =========================================================================
     {
-        "q": "Specialized proteins that act as biological catalysts by accelerating chemical reactions without being consumed are ____.",
+        "q": "Proteins that act as biological catalysts by speeding up chemical reactions without being consumed in the process are ____.",
         "a": "enzymes",
         "distractors": ["hormones", "antibodies", "receptors"],
-        "topic": "Enzymes Overview",
-        "explanation": "Enzymes are protein catalysts that lower activation energy, speeding up metabolic reactions without being consumed."
+        "topic": "Enzymes as Biological Catalysts",
+        "explanation": "Enzymes are protein catalysts that accelerate biochemical reactions by lowering activation energy, remaining unaltered after the reaction."
     },
     {
-        "q": "The specific reactant molecule upon which an enzyme acts during a catalyzed biochemical reaction is the ____.",
+        "q": "A key defining feature of biological enzymes is that they accelerate reactions without being ____ in the process.",
+        "a": "consumed",
+        "distractors": ["activated", "folded", "synthesized"],
+        "topic": "Enzymatic Catalysis",
+        "explanation": "Catalysts facilitate chemical reactions without being consumed or permanently altered in the process."
+    },
+    {
+        "q": "The specific chemical reactant molecule upon which an enzyme acts is the ____.",
         "a": "substrate",
-        "distractors": ["coenzyme", "inhibitor", "product"],
-        "topic": "Enzyme Substrates",
-        "explanation": "The substrate is the specific molecule that binds to an enzyme's active site to undergo chemical alteration."
+        "distractors": ["product", "coenzyme", "cofactor"],
+        "topic": "Enzyme Substrate",
+        "explanation": "The substrate is the specific reactant molecule that binds to an enzyme to undergo biochemical conversion."
     },
     {
-        "q": "The specialized region or pocket on an enzyme where the substrate binds to initiate catalysis is the ____ site.",
+        "q": "The specialized region or binding pocket on an enzyme protein where the substrate binds is the ____ site.",
         "a": "active",
-        "distractors": ["allosteric", "regulatory", "cofactor"],
+        "distractors": ["allosteric", "variable", "regulatory"],
         "topic": "Enzyme Active Site",
-        "explanation": "The active site is the catalytic pocket where substrate molecules fit precisely like a lock and key."
+        "explanation": "The active site is the specialized catalytic pocket on an enzyme where substrate molecules bind."
     },
     {
-        "q": "Nonprotein chemical substances (such as metal ions) required by certain enzymes to facilitate catalytic activity are ____.",
+        "q": "When a substrate binds to the active site of an enzyme, they temporarily form an ____ complex.",
+        "a": "enzyme–substrate",
+        "distractors": ["enzyme–inhibitor", "active–allosteric", "ionic–covalent"],
+        "topic": "Enzyme–Substrate Complex",
+        "explanation": "Substrate binding to the active site produces a temporary enzyme-substrate intermediate complex."
+    },
+    {
+        "q": "Following catalytic conversion within the enzyme-substrate complex, the substrate is transformed into ____ that leave the active site.",
+        "a": "products",
+        "distractors": ["monomers", "cofactors", "reactants"],
+        "topic": "Enzymatic Products",
+        "explanation": "Once catalysis is complete, newly formed products detach and release from the enzyme's active site."
+    },
+    {
+        "q": "Nonprotein chemical substances required by certain enzymes to convert substrate to product are called ____.",
         "a": "cofactors",
-        "distractors": ["monomers", "substrates", "polymers"],
+        "distractors": ["polymers", "inhibitors", "monomers"],
         "topic": "Cofactors",
-        "explanation": "Cofactors are nonprotein helper components necessary for enzyme function."
+        "explanation": "Cofactors are nonprotein helper components (such as metal ions) required by enzymes for catalytic activity."
     },
     {
-        "q": "Organic cofactors derived from dietary nutrients, such as vitamins, that assist enzymatic reactions are specifically called ____.",
+        "q": "Organic cofactors, such as dietary vitamins, that assist enzymes in performing catalytic functions are specifically called ____.",
         "a": "coenzymes",
         "distractors": ["substrates", "isotopes", "amphipaths"],
         "topic": "Coenzymes",
-        "explanation": "Coenzymes are organic cofactors (often derived from vitamins) that facilitate catalytic transfer during reactions."
+        "explanation": "Coenzymes are organic cofactors (often derived from vitamins) that assist enzymes in transferring chemical groups."
     },
 
-    # --- Part 9: Nucleic Acids ---
+    # =========================================================================
+    # PART 10: NUCLEIC ACIDS, DNA & RNA
+    # =========================================================================
     {
-        "q": "The two varieties of nucleic acids that store and transmit hereditary genetic information in cells are RNA and ____.",
-        "a": "DNA",
-        "distractors": ["ATP", "GTP", "NADH"],
-        "topic": "Nucleic Acids Overview",
-        "explanation": "Deoxyribonucleic acid (DNA) and Ribonucleic acid (RNA) are the informational polymers of life."
+        "q": "Deoxyribonucleic acid (DNA) and ribonucleic acid (RNA) are polymers composed of repeating subunits called ____.",
+        "a": "nucleotides",
+        "distractors": ["amino acids", "fatty acids", "monosaccharides"],
+        "topic": "Nucleic Acids & Nucleotides",
+        "explanation": "DNA and RNA are nucleic acid polymers composed of nucleotide monomer building blocks."
     },
     {
-        "q": "The fundamental monomeric subunit of nucleic acids, consisting of a five-carbon sugar, a phosphate group, and a nitrogenous base, is a ____.",
-        "a": "nucleotide",
-        "distractors": ["nucleoside", "amino acid", "fatty acid"],
-        "topic": "Nucleotides",
-        "explanation": "Nucleotides are the monomers that polymerize to form DNA and RNA chains."
+        "q": "A nucleotide consists of a five-carbon sugar, a phosphate group, and one of five ____ bases.",
+        "a": "nitrogen-containing",
+        "distractors": ["carbon-saturated", "sulfur-rich", "oxygen-free"],
+        "topic": "Nucleotide Components",
+        "explanation": "Every nucleotide is built from three components: a five-carbon pentose sugar, a phosphate group, and a nitrogenous base."
     },
     {
-        "q": "A distinct segment of DNA along a chromosome that encodes the instructions for the sequence of amino acids in a protein is a ____.",
+        "q": "The pentose sugar present in every nucleotide molecule contains ____ carbon atoms.",
+        "a": "five",
+        "distractors": ["six", "three", "seven"],
+        "topic": "Nucleotide Pentose Sugar",
+        "explanation": "Nucleotides always contain a 5-carbon pentose sugar (deoxyribose in DNA, ribose in RNA)."
+    },
+    {
+        "q": "Stretches of DNA that determine the sequence of amino acids that will assemble into a protein are called a ____.",
         "a": "gene",
-        "distractors": ["codon", "nucleotide", "ribosome"],
+        "distractors": ["codon", "ribosome", "nucleolus"],
         "topic": "Genes",
-        "explanation": "A gene is a hereditary unit of DNA containing the genetic code for assembling a polypeptide."
+        "explanation": "A gene is a functional segment of DNA that encodes the precise amino acid sequence of a polypeptide chain."
     },
     {
-        "q": "The five-carbon pentose sugar found in DNA nucleotides is ____.",
+        "q": "A gene consists of a stretch of DNA that encodes instructions to determine the sequence of ____ in a protein.",
+        "a": "amino acids",
+        "distractors": ["monosaccharides", "fatty acids", "nucleotides"],
+        "topic": "Genetic Code for Amino Acids",
+        "explanation": "Genes encode genetic information that translates into the primary sequence of amino acids during protein synthesis."
+    },
+    {
+        "q": "DNA and RNA are biochemically distinguished from each other by their structure, nitrogen-containing bases, and ____ component.",
+        "a": "sugar",
+        "distractors": ["phosphate", "lipid", "protein"],
+        "topic": "DNA vs RNA Distinctions",
+        "explanation": "DNA and RNA are distinguished by their strandedness (structure), their pentose sugar (deoxyribose vs ribose), and their bases."
+    },
+    {
+        "q": "In terms of molecular architecture, DNA is characteristically a ____-stranded molecule.",
+        "a": "double",
+        "distractors": ["single", "triple", "branched"],
+        "topic": "DNA Double-Stranded Structure",
+        "explanation": "DNA consists of two antiparallel nucleotide strands wound into a double helix."
+    },
+    {
+        "q": "The five-carbon pentose sugar component found in DNA nucleotides is ____.",
         "a": "deoxyribose",
         "distractors": ["ribose", "glucose", "fructose"],
-        "topic": "Deoxyribose Sugar",
-        "explanation": "DNA contains deoxyribose sugar, which lacks an oxygen atom on carbon 2 compared to ribose."
+        "topic": "Deoxyribose",
+        "explanation": "DNA contains deoxyribose sugar, which lacks an oxygen atom at the 2' carbon position compared to ribose."
     },
     {
-        "q": "The nitrogenous base found uniquely in DNA that pairs with adenine, but is absent in RNA, is ____.",
+        "q": "The four nitrogen-containing bases found in DNA nucleotides are adenine, guanine, cytosine, and ____.",
         "a": "thymine",
-        "distractors": ["uracil", "guanine", "cytosine"],
+        "distractors": ["uracil", "ribose", "histidine"],
         "topic": "DNA Bases (Thymine)",
-        "explanation": "Thymine (T) is found exclusively in DNA; RNA replaces thymine with uracil (U)."
+        "explanation": "DNA contains four nitrogenous bases: Adenine (A), Guanine (G), Cytosine (C), and Thymine (T)."
     },
     {
-        "q": "The single-stranded nucleic acid containing ribose sugar and the bases adenine, guanine, cytosine, and uracil is ____.",
-        "a": "RNA",
-        "distractors": ["DNA", "ATP", "cAMP"],
-        "topic": "RNA Overview",
-        "explanation": "Ribonucleic acid (RNA) is typically single-stranded and features ribose sugar and uracil."
+        "q": "In contrast to DNA, RNA is characteristically a ____-stranded molecule.",
+        "a": "single",
+        "distractors": ["double", "triple", "circular"],
+        "topic": "RNA Single-Stranded Structure",
+        "explanation": "RNA molecules typically exist as single-stranded polynucleotide chains."
     },
     {
-        "q": "The nitrogenous base found in RNA that substitutes for thymine and base-pairs with adenine is ____.",
+        "q": "The five-carbon pentose sugar component found in RNA nucleotides is ____.",
+        "a": "ribose",
+        "distractors": ["deoxyribose", "glucose", "galactose"],
+        "topic": "Ribose in RNA",
+        "explanation": "RNA contains ribose sugar, possessing a 2'-hydroxyl group."
+    },
+    {
+        "q": "The four nitrogen-containing bases found in RNA nucleotides are adenine, guanine, cytosine, and ____.",
         "a": "uracil",
-        "distractors": ["thymine", "cytosine", "guanine"],
+        "distractors": ["thymine", "valine", "alanine"],
         "topic": "RNA Bases (Uracil)",
-        "explanation": "In RNA, uracil (U) takes the place of thymine and pairs with adenine during transcription."
+        "explanation": "RNA contains Adenine (A), Guanine (G), Cytosine (C), and Uracil (U), lacking thymine."
     },
     {
-        "q": "In human cells, RNA plays a pivotal role in ____ synthesis as messenger RNA, transfer RNA, and ribosomal RNA.",
-        "a": "protein",
-        "distractors": ["lipid", "carbohydrate", "steroid"],
-        "topic": "Role of RNA in Protein Synthesis",
-        "explanation": "RNA molecules (mRNA, tRNA, rRNA) orchestrate protein synthesis by translating genetic instructions into polypeptide chains."
+        "q": "The nitrogenous base found in RNA that substitutes for thymine and pairs with adenine is ____.",
+        "a": "uracil",
+        "distractors": ["cytosine", "guanine", "thymine"],
+        "topic": "Uracil Replaces Thymine",
+        "explanation": "In RNA, uracil replaces thymine and forms complementary base pairs with adenine."
+    },
+    {
+        "q": "In human cells, RNA molecules serve as structural and catalytic components of protein-making organelles called ____.",
+        "a": "ribosomes",
+        "distractors": ["lysosomes", "mitochondria", "vacuoles"],
+        "topic": "RNA in Ribosomes",
+        "explanation": "Ribosomal RNA (rRNA) combines with proteins to form the structure of ribosomes, the protein synthesis machines."
+    },
+    {
+        "q": "During protein synthesis, transfer RNA (tRNA) molecules act specifically as transfer agents of ____.",
+        "a": "amino acids",
+        "distractors": ["fatty acids", "glucose units", "phosphate ions"],
+        "topic": "tRNA Transfer of Amino Acids",
+        "explanation": "tRNA transfers specific amino acids to the growing polypeptide chain at the ribosome."
+    },
+    {
+        "q": "During protein synthesis, messenger RNA (mRNA) functions as the carrier of genetic ____ from DNA to the ribosome.",
+        "a": "information",
+        "distractors": ["enzymes", "glucose", "radiation"],
+        "topic": "mRNA Messenger of Information",
+        "explanation": "mRNA acts as the messenger carrying transcribed genetic information from nuclear DNA to cytoplasmic ribosomes."
+    },
+    {
+        "q": "In cell biology, RNA plays three primary roles in protein synthesis: as messengers of information, transfer agents of amino acids, and components of ____.",
+        "a": "ribosomes",
+        "distractors": ["plasma membranes", "chromosomes", "centrioles"],
+        "topic": "Three Roles of RNA",
+        "explanation": "The three core functions of RNA in protein synthesis are: mRNA (information messenger), tRNA (amino acid transfer), and rRNA (ribosome component)."
     }
 ]
 
-print(f"Total HMBY311 Module 1 items extracted: {len(HMBY_MODULE_1_ITEMS)}")
+if __name__ == "__main__":
+    print(f"Total HMBY311 Module 1 items extracted: {len(HMBY_MODULE_1_ITEMS)}")
