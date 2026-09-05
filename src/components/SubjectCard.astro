@@ -1,0 +1,343 @@
+---
+import type { Subject } from '../data/subjects';
+
+interface Props {
+  subject: Subject;
+}
+
+const { subject } = Astro.props;
+const baseUrl = import.meta.env.BASE_URL;
+const totalSubjectItems = subject.modules.reduce((acc, m) => acc + m.itemCount, 0);
+---
+
+<article class="subject-card" data-code={subject.code} data-status={subject.status}>
+  <div class="card-header">
+    <div class="header-meta">
+      <span class="code-badge" style={`border-color: ${subject.accentColor}; color: ${subject.accentColor};`}>
+        {subject.code}
+      </span>
+      <span class="category-tag">{subject.tag}</span>
+      {subject.status === 'active' ? (
+        <span class="status-pill active">
+          <strong>{totalSubjectItems}</strong> Qs &bull; {subject.modules.length} {subject.modules.length === 1 ? 'Module' : 'Modules'}
+        </span>
+      ) : (
+        <span class="status-pill upcoming">Upcoming</span>
+      )}
+    </div>
+
+    <h2 class="subject-title">{subject.title}</h2>
+    <div class="subject-subtitle">{subject.subtitle}</div>
+    <p class="subject-description">{subject.description}</p>
+  </div>
+
+  <div class="modules-section">
+    <div class="modules-header">
+      <span class="modules-title">Module Questionnaires</span>
+      <span class="term-badge">{subject.term}</span>
+    </div>
+
+    {subject.modules.length > 0 ? (
+      <div class="modules-list">
+        {subject.modules.map((mod) => (
+          <div class="module-item">
+            <div class="module-item-top">
+              <div class="module-item-title-row">
+                <span class="mod-num">M{mod.number}</span>
+                <h3 class="mod-title">{mod.title}</h3>
+                <span class="item-count-badge">{mod.itemCount} Items</span>
+              </div>
+              <p class="mod-desc">{mod.description}</p>
+              
+              <div class="topic-chips">
+                {mod.topics.map((t) => (
+                  <span class="topic-chip">{t}</span>
+                ))}
+              </div>
+            </div>
+
+            <div class="module-item-bottom">
+              <div class="module-actions">
+                <a href={`${baseUrl}${mod.quizPath}`} class="btn-primary">
+                  Start Quiz &rarr;
+                </a>
+                {mod.notebookLmUrl && (
+                  <a href={mod.notebookLmUrl} target="_blank" rel="noopener noreferrer" class="btn-secondary">
+                    NotebookLM &nearr;
+                  </a>
+                )}
+              </div>
+
+              <div class="download-pills">
+                {mod.downloads.pdf && (
+                  <a href={`${baseUrl}${mod.downloads.pdf}`} download class="download-pill" title="Download PDF Reviewer">
+                    PDF
+                  </a>
+                )}
+                {mod.downloads.docx && (
+                  <a href={`${baseUrl}${mod.downloads.docx}`} download class="download-pill" title="Download Word DOCX">
+                    DOCX
+                  </a>
+                )}
+                {mod.downloads.json && (
+                  <a href={`${baseUrl}${mod.downloads.json}`} download class="download-pill" title="Download JSON Dataset">
+                    JSON
+                  </a>
+                )}
+                {mod.downloads.md && (
+                  <a href={`${baseUrl}${mod.downloads.md}`} download class="download-pill" title="Download Markdown Key">
+                    MD
+                  </a>
+                )}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    ) : (
+      <div class="upcoming-box">
+        <div class="upcoming-sparkle">✦</div>
+        <p class="upcoming-text">Course questionnaires and slide extractors in preparation.</p>
+        <span class="upcoming-sub">Check back soon for Module 1 reviewer.</span>
+      </div>
+    )}
+  </div>
+</article>
+
+<style>
+  .subject-card {
+    background: var(--color-bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .subject-card:hover {
+    border-color: var(--color-accent-primary);
+    background: var(--color-bg-surface-elevated);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(138, 154, 134, 0.08);
+  }
+
+  .card-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .header-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 0.85rem;
+    flex-wrap: wrap;
+  }
+
+  .code-badge {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid;
+    padding: 3px 8px;
+    border-radius: var(--radius-xs);
+  }
+
+  .category-tag {
+    font-size: 0.72rem;
+    color: var(--color-text-subtle);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .status-pill {
+    margin-left: auto;
+    font-size: 0.74rem;
+    padding: 3px 8px;
+    border-radius: var(--radius-xs);
+  }
+
+  .status-pill.active {
+    background: rgba(138, 154, 134, 0.1);
+    border: 1px solid rgba(138, 154, 134, 0.25);
+    color: var(--color-text-main);
+  }
+
+  .status-pill.active strong {
+    color: var(--color-accent-primary);
+  }
+
+  .status-pill.upcoming {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border-subtle);
+    color: var(--color-text-subtle);
+  }
+
+  .subject-title {
+    font-size: 1.35rem;
+    font-weight: 500;
+    color: var(--color-text-main);
+    letter-spacing: -0.02em;
+    margin-bottom: 0.35rem;
+  }
+
+  .subject-subtitle {
+    font-size: 0.85rem;
+    color: var(--color-accent-secondary);
+    margin-bottom: 0.75rem;
+  }
+
+  .subject-description {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+  }
+
+  /* Modules Section */
+  .modules-section {
+    border-top: 1px solid var(--border-subtle);
+    padding-top: 1.25rem;
+    margin-top: 0.5rem;
+  }
+
+  .modules-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .modules-title {
+    font-size: 0.76rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-accent-secondary);
+  }
+
+  .term-badge {
+    font-size: 0.72rem;
+    color: var(--color-text-subtle);
+  }
+
+  .modules-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .module-item {
+    background: #000000;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    padding: 1.15rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: border-color 0.2s ease;
+  }
+
+  .module-item:hover {
+    border-color: var(--border-medium);
+  }
+
+  .module-item-title-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 0.5rem;
+  }
+
+  .mod-num {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--color-accent-primary);
+    background: rgba(138, 154, 134, 0.1);
+    border: 1px solid rgba(138, 154, 134, 0.2);
+    padding: 2px 6px;
+    border-radius: var(--radius-xs);
+  }
+
+  .mod-title {
+    font-size: 0.98rem;
+    font-weight: 500;
+    color: var(--color-text-main);
+  }
+
+  .item-count-badge {
+    margin-left: auto;
+    font-size: 0.74rem;
+    color: var(--color-text-subtle);
+  }
+
+  .mod-desc {
+    font-size: 0.82rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+  }
+
+  .topic-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .topic-chip {
+    font-size: 0.7rem;
+    color: var(--color-text-muted);
+    background: var(--color-bg-surface);
+    border: 1px solid var(--border-subtle);
+    padding: 2px 8px;
+    border-radius: var(--radius-xs);
+  }
+
+  .module-item-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+  }
+
+  .module-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .download-pills {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .upcoming-box {
+    padding: 1.5rem;
+    background: #000000;
+    border: 1px dashed var(--border-subtle);
+    border-radius: var(--radius-sm);
+    text-align: center;
+  }
+
+  .upcoming-sparkle {
+    color: var(--color-text-subtle);
+    margin-bottom: 0.4rem;
+    font-size: 0.9rem;
+  }
+
+  .upcoming-text {
+    font-size: 0.82rem;
+    color: var(--color-text-muted);
+    margin-bottom: 0.2rem;
+  }
+
+  .upcoming-sub {
+    font-size: 0.74rem;
+    color: var(--color-text-subtle);
+  }
+</style>

@@ -1,0 +1,427 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SubjectCard from '../components/SubjectCard.astro';
+import { SUBJECTS, TOTAL_QUESTIONS, TOTAL_MODULES } from '../data/subjects';
+
+const baseUrl = import.meta.env.BASE_URL;
+const activeSubjects = SUBJECTS.filter((s) => s.status === 'active');
+---
+
+<Layout title="ReviewIII — Year III Computer Science Study Reviewer & Quiz Portal">
+  <main class="container">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="tagline">
+        <span class="sparkle">✦</span>
+        <span>ReviewIII Study Portal &bull; Third Year Computer Science</span>
+      </div>
+      <h1 class="hero-title">Academic Review Hub</h1>
+      <p class="hero-subtitle">
+        Curated identification-type questionnaires with 4-choice distractors, comprehensive answer keys, and embedded NotebookLM interactive quizzes.
+      </p>
+      
+      <div class="meta-strip">
+        <div class="meta-pill">
+          <strong>{TOTAL_QUESTIONS}</strong> Active Items
+        </div>
+        <div class="meta-pill">
+          <strong>{TOTAL_MODULES}</strong> Ready Modules
+        </div>
+        <div class="meta-pill">
+          <strong>{activeSubjects.length}</strong> Active Subjects
+        </div>
+        <div class="meta-pill">
+          <strong>100%</strong> Rationales & Keys
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Filter & Search Controls -->
+    <section class="controls-section" id="subjects">
+      <div class="filter-tabs">
+        <button class="filter-tab active" data-filter="all">All Subjects ({SUBJECTS.length})</button>
+        <button class="filter-tab" data-filter="active">Active Quizzes ({activeSubjects.length})</button>
+        <button class="filter-tab" data-filter="NETC311">NETC311 (2 Modules)</button>
+        <button class="filter-tab" data-filter="HMBY311">HMBY311 (1 Module)</button>
+        <button class="filter-tab" data-filter="upcoming">Upcoming ({SUBJECTS.length - activeSubjects.length})</button>
+      </div>
+
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input
+          type="text"
+          id="subject-search"
+          placeholder="Filter by subject code, topic, or keyword..."
+          aria-label="Filter subjects"
+        />
+      </div>
+    </section>
+
+    <!-- Subjects Grid -->
+    <section class="subjects-grid" id="subjects-container">
+      {SUBJECTS.map((subject) => (
+        <SubjectCard subject={subject} />
+      ))}
+    </section>
+
+    <!-- Consolidated Sources & Downloads Section -->
+    <section class="sources-section">
+      <div class="section-header">
+        <h2 class="section-title">Consolidated Downloads & Answer Keys</h2>
+        <span class="section-sub">Offline PDF Questionnaires, Word DOCX, JSON Datasets, and Markdown</span>
+      </div>
+
+      <div class="sources-box">
+        <div class="source-list">
+          <!-- NETC311 Module 1 -->
+          <div class="source-row">
+            <div class="source-info">
+              <span class="source-tag netc">NETC311</span>
+              <div class="source-text">
+                <span class="source-name">Module 1 — Networking Today Reviewer</span>
+                <span class="source-meta">99 Identification Items &bull; Cisco CCNA ITN</span>
+              </div>
+            </div>
+            <div class="file-badges">
+              <a href={`${baseUrl}downloads/netc311/Module 1 - Networking Today - Questionnaire.pdf`} download class="download-pill">PDF</a>
+              <a href={`${baseUrl}downloads/netc311/Module 1 - Networking Today - Questionnaire.docx`} download class="download-pill">DOCX</a>
+              <a href={`${baseUrl}downloads/netc311/Module_1_NotebookLM_Quiz.json`} download class="download-pill">JSON</a>
+              <a href={`${baseUrl}downloads/netc311/Module_1_NotebookLM_Quiz.md`} download class="download-pill">MD</a>
+            </div>
+          </div>
+
+          <!-- NETC311 Module 2 -->
+          <div class="source-row">
+            <div class="source-info">
+              <span class="source-tag netc">NETC311</span>
+              <div class="source-text">
+                <span class="source-name">Module 2 — Basic Switch & End Device Configuration Reviewer</span>
+                <span class="source-meta">104 Identification Items &bull; Cisco CCNA ITN</span>
+              </div>
+            </div>
+            <div class="file-badges">
+              <a href={`${baseUrl}downloads/netc311/Module 2 - Basic Switch and End Device Configuration - Questionnaire.pdf`} download class="download-pill">PDF</a>
+              <a href={`${baseUrl}downloads/netc311/Module 2 - Basic Switch and End Device Configuration - Questionnaire.docx`} download class="download-pill">DOCX</a>
+              <a href={`${baseUrl}downloads/netc311/Module_2_NotebookLM_Quiz.json`} download class="download-pill">JSON</a>
+              <a href={`${baseUrl}downloads/netc311/Module_2_NotebookLM_Quiz.md`} download class="download-pill">MD</a>
+            </div>
+          </div>
+
+          <!-- HMBY311 Module 1 -->
+          <div class="source-row">
+            <div class="source-info">
+              <span class="source-tag hmby">HMBY311</span>
+              <div class="source-text">
+                <span class="source-name">Module 1 — The Scientific Method & Basic Chemistry Reviewer</span>
+                <span class="source-meta">82 Identification Items &bull; Human Biology</span>
+              </div>
+            </div>
+            <div class="file-badges">
+              <a href={`${baseUrl}downloads/hmby311/Module 1 - Human Biology - Scientific Method and Basic Chemistry.pdf`} download class="download-pill">PDF</a>
+              <a href={`${baseUrl}downloads/hmby311/Module 1 - Human Biology - Scientific Method and Basic Chemistry.docx`} download class="download-pill">DOCX</a>
+              <a href={`${baseUrl}downloads/hmby311/HMBY311_Module_1_Quiz.json`} download class="download-pill">JSON</a>
+              <a href={`${baseUrl}downloads/hmby311/HMBY311_Module_1_Quiz.md`} download class="download-pill">MD</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  /* Hero */
+  .hero {
+    margin-bottom: 3rem;
+  }
+
+  .tagline {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--color-accent-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 1rem;
+  }
+
+  .sparkle {
+    font-size: 1rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    font-weight: 200;
+    letter-spacing: -0.03em;
+    color: var(--color-text-main);
+    line-height: 1.15;
+    margin-bottom: 0.85rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.98rem;
+    color: var(--color-text-muted);
+    max-width: 720px;
+    line-height: 1.7;
+    margin-bottom: 1.75rem;
+  }
+
+  .meta-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .meta-pill {
+    font-size: 0.78rem;
+    color: var(--color-text-muted);
+    background: var(--color-bg-surface);
+    border: 1px solid var(--border-subtle);
+    padding: 5px 14px;
+    border-radius: var(--radius-sm);
+  }
+
+  .meta-pill strong {
+    color: var(--color-accent-primary);
+  }
+
+  /* Controls */
+  .controls-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 2rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .filter-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .filter-tab {
+    background: var(--color-bg-surface);
+    border: 1px solid var(--border-subtle);
+    color: var(--color-text-muted);
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .filter-tab:hover {
+    color: var(--color-text-main);
+    border-color: var(--border-medium);
+  }
+
+  .filter-tab.active {
+    background: var(--color-accent-primary);
+    color: var(--color-text-inverse);
+    font-weight: 600;
+    border-color: var(--color-accent-primary);
+  }
+
+  .search-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--color-bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    padding: 6px 12px;
+    min-width: 280px;
+    transition: border-color 0.2s ease;
+  }
+
+  .search-box:focus-within {
+    border-color: var(--color-accent-primary);
+  }
+
+  .search-icon {
+    font-size: 0.8rem;
+    opacity: 0.6;
+  }
+
+  #subject-search {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--color-text-main);
+    font-size: 0.82rem;
+    width: 100%;
+    font-family: inherit;
+  }
+
+  #subject-search::placeholder {
+    color: var(--color-text-subtle);
+  }
+
+  /* Subjects Grid */
+  .subjects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+  }
+
+  /* Sources Section */
+  .sources-section {
+    margin-top: 2rem;
+  }
+
+  .section-header {
+    margin-bottom: 1.25rem;
+  }
+
+  .section-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-accent-secondary);
+    margin-bottom: 0.2rem;
+  }
+
+  .section-sub {
+    font-size: 0.8rem;
+    color: var(--color-text-subtle);
+  }
+
+  .sources-box {
+    background: var(--color-bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+  }
+
+  .source-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+
+  .source-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    background: #000000;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    flex-wrap: wrap;
+    gap: 12px;
+    transition: border-color 0.2s ease;
+  }
+
+  .source-row:hover {
+    border-color: var(--border-medium);
+  }
+
+  .source-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .source-tag {
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: var(--radius-xs);
+  }
+
+  .source-tag.netc {
+    color: #8a9a86;
+    background: rgba(138, 154, 134, 0.1);
+    border: 1px solid rgba(138, 154, 134, 0.2);
+  }
+
+  .source-tag.hmby {
+    color: #a89f91;
+    background: rgba(168, 159, 145, 0.1);
+    border: 1px solid rgba(168, 159, 145, 0.2);
+  }
+
+  .source-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .source-name {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--color-text-main);
+  }
+
+  .source-meta {
+    font-size: 0.75rem;
+    color: var(--color-text-subtle);
+  }
+
+  .file-badges {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+</style>
+
+<script>
+  // Client-side filtering & live search
+  document.addEventListener('DOMContentLoaded', () => {
+    const filterTabs = document.querySelectorAll('.filter-tab');
+    const searchInput = document.getElementById('subject-search') as HTMLInputElement;
+    const cards = document.querySelectorAll<HTMLElement>('.subject-card');
+
+    let currentFilter = 'all';
+
+    function updateVisibility() {
+      const query = (searchInput?.value || '').toLowerCase().trim();
+
+      cards.forEach((card) => {
+        const code = card.dataset.code || '';
+        const status = card.dataset.status || '';
+        const text = card.textContent?.toLowerCase() || '';
+
+        // Filter tab match
+        let tabMatch = false;
+        if (currentFilter === 'all') {
+          tabMatch = true;
+        } else if (currentFilter === 'active') {
+          tabMatch = status === 'active';
+        } else if (currentFilter === 'upcoming') {
+          tabMatch = status === 'upcoming';
+        } else {
+          tabMatch = code.toLowerCase() === currentFilter.toLowerCase();
+        }
+
+        // Search match
+        const searchMatch = !query || text.includes(query);
+
+        if (tabMatch && searchMatch) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    filterTabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        filterTabs.forEach((t) => t.classList.remove('active'));
+        tab.classList.add('active');
+        currentFilter = tab.getAttribute('data-filter') || 'all';
+        updateVisibility();
+      });
+    });
+
+    searchInput?.addEventListener('input', updateVisibility);
+  });
+</script>

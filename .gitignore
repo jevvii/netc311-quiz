@@ -4,3 +4,7 @@ __pycache__/
 *.log
 test_quiz*.json
 test_quiz*.html
+node_modules/
+dist/
+.astro/
+*.log

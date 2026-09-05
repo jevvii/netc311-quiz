@@ -1,0 +1,52 @@
+---
+import { TOTAL_QUESTIONS, TOTAL_MODULES } from '../data/subjects';
+
+interface Props {
+  currentSubject?: string;
+}
+
+const { currentSubject } = Astro.props;
+const baseUrl = import.meta.env.BASE_URL;
+---
+
+<header class="site-header">
+  <div class="nav-container">
+    <a href={baseUrl} class="brand">
+      <span class="brand-sparkle">✦</span>
+      <span class="brand-title">ReviewIII</span>
+      <span class="brand-sub">Hub</span>
+      {currentSubject && (
+        <>
+          <span class="crumb-divider">/</span>
+          <span class="brand-crumb">{currentSubject}</span>
+        </>
+      )}
+    </a>
+
+    <div class="nav-right">
+      <div class="stat-badge">
+        <strong>{TOTAL_QUESTIONS}</strong> Items &bull; <strong>{TOTAL_MODULES}</strong> Modules
+      </div>
+      <a href={`${baseUrl}#subjects`} class="nav-link">Subjects</a>
+      <a href="https://github.com/jevvii/reviewiii" target="_blank" rel="noopener noreferrer" class="nav-link">
+        GitHub &nearr;
+      </a>
+    </div>
+  </div>
+</header>
+
+<style>
+  .crumb-divider {
+    color: #444;
+    font-size: 0.85rem;
+  }
+  .brand-crumb {
+    color: var(--color-accent-primary);
+    font-weight: 500;
+  }
+  @media (max-width: 640px) {
+    .stat-badge {
+      display: none;
+    }
+  }
+</style>
