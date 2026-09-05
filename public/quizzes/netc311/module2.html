@@ -242,6 +242,86 @@
   }
 </style>
 
+
+<style id="mobile-responsive-quiz-styles">
+  /* Mobile Viewport Optimizations for Quiz Player */
+  @media (max-width: 768px) {
+    #quiz-hub-nav {
+      padding: 10px 14px !important;
+      gap: 8px !important;
+    }
+
+    .nav-breadcrumbs-title {
+      display: none !important;
+    }
+
+    .nav-breadcrumbs-slash {
+      display: none !important;
+    }
+
+    #quiz-hub-nav a, #quiz-hub-nav span {
+      padding: 6px 11px !important;
+      font-size: 12px !important;
+    }
+
+    #quiz-loader {
+      top: 46px !important;
+    }
+
+    .app-container {
+      padding: 0.5rem 0.25rem !important;
+      max-width: 100% !important;
+    }
+
+    /* Touch-friendly answer choices */
+    .answer-options .answer-btn,
+    .answer-btn,
+    .answer-option-button,
+    button[class*="answer"] {
+      padding: 12px 14px !important;
+      min-height: 48px !important;
+      font-size: 14.5px !important;
+      line-height: 1.45 !important;
+      margin-bottom: 8px !important;
+      border-radius: 6px !important;
+    }
+
+    /* Feedback Cards */
+    .feedback-card, [class*="feedback-card"] {
+      padding: 12px 14px !important;
+      margin-top: 12px !important;
+    }
+
+    /* Navigation buttons */
+    .navigation-buttons-container,
+    .navigation-buttons-container-mobile {
+      padding-top: 12px !important;
+      gap: 8px !important;
+    }
+
+    .navigation-buttons-container .next-btn,
+    .navigation-buttons-container-mobile .next-btn,
+    .navigation-buttons-container .back-btn,
+    .navigation-buttons-container-mobile .back-btn {
+      min-height: 44px !important;
+      font-size: 14px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+  }
+
+  @media (max-width: 420px) {
+    #quiz-hub-nav {
+      padding: 8px 10px !important;
+    }
+    
+    .nav-sub-code {
+      display: none !important;
+    }
+  }
+</style>
+
 </head>
   <body>
 
@@ -254,10 +334,10 @@
           <span style="color: #8a9a86; letter-spacing: -0.01em;">ReviewIII</span>
           <span style="color: #f0f0f0;">Hub</span>
         </a>
-        <span style="color: #444444; font-size: 13px;">/</span>
-        <span style="color: #a89f91; font-size: 13px; font-weight: 500;">NETC311</span>
-        <span style="color: #444444; font-size: 13px;">/</span>
-        <span style="color: #a0a0a0; font-size: 13px; font-weight: 400;">Module 2: Basic Switch & End Device Config (104 Qs)</span>
+        <span class="nav-breadcrumbs-slash" style="color: #444444; font-size: 13px;">/</span>
+        <span class="nav-sub-code" style="color: #a89f91; font-size: 13px; font-weight: 500;">NETC311</span>
+        <span class="nav-breadcrumbs-slash" style="color: #444444; font-size: 13px;">/</span>
+        <span class="nav-breadcrumbs-title" style="color: #a0a0a0; font-size: 13px; font-weight: 400;">Module 2: Basic Switch & End Device Config (104 Qs)</span>
       </div>
       <div style="display: flex; align-items: center; gap: 10px;">
         <a href="../../index.html" style="color: #a0a0a0; text-decoration: none; font-size: 13px; font-weight: 500; padding: 6px 14px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.08); background: transparent; transition: all 0.2s;">Hub Overview</a>
